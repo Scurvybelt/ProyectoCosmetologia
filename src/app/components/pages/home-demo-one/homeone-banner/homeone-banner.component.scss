@@ -1,0 +1,342 @@
+.banner-area {
+    background-color: #efcec9;
+    position: relative;
+    z-index: 1;
+
+    .container-fluid {
+        padding: {
+            left: 50px;
+            right: 50px;
+        };
+    }
+}
+.banner-content {
+    max-width: 620px;
+    
+    .sub-title {
+        color: var(--mainColor);
+        margin-bottom: 5px;
+        display: block;
+    }
+    h1 {
+        font-size: 70px;
+        margin-bottom: 20px;
+    }
+    .default-btn {
+        margin-top: 10px;
+    }
+}
+.banner-image {
+    padding-top: 70px;
+    position: relative;
+    margin-left: -100px;
+
+    &::before {
+        top: 0;
+        left: 50%;
+        width: 46%;
+        content: '';
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        transform: translateX(-50%);
+        background-color: rgba(226, 179, 172, 1);
+    }
+    .woman {
+        position: relative;
+        max-width: 570px;
+        z-index: 1;
+
+        img {
+            max-width: 470px;
+        }
+        .vector {
+            position: absolute;
+            z-index: -1;
+            right: 10px;
+            top: -50px;
+
+            img {
+                max-width: 415px;
+            }
+        }
+    }
+    .nail-img {
+        right: 0;
+        top: 50%;
+        z-index: -1;
+        position: absolute;
+        border-radius: 15px;
+        transform: translateY(-50%);
+
+        img {
+            max-width: 350px;
+            border-radius: 15px;
+            border: 5px solid #e2b3ac;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .banner-area {
+        padding-top: 60px;
+
+        .container-fluid {
+            padding: {
+                left: var(--bs-gutter-x, .75rem);
+                right: var(--bs-gutter-x, .75rem);
+            };
+        }
+    }
+    .banner-content {
+        max-width: 100%;
+        text-align: center;
+        
+        .sub-title {
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .default-btn {
+            margin-top: 0;
+        }
+    }
+    .banner-image {
+        padding-top: 25px;
+        margin-left: 0;
+    
+        &::before {
+            display: none;
+        }
+        .woman {
+            max-width: 100%;
+    
+            img {
+                max-width: 100%;
+            }
+            .vector {
+                display: none;
+            }
+        }
+        .nail-img {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .banner-area {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .banner-area {
+        padding-top: 80px;
+
+        .container-fluid {
+            max-width: 720px;
+            padding: {
+                left: var(--bs-gutter-x, .75rem);
+                right: var(--bs-gutter-x, .75rem);
+            };
+        }
+    }
+    .banner-content {
+        max-width: 100%;
+        text-align: center;
+        
+        .sub-title {
+            margin-bottom: 5px;
+        }
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        p {
+            max-width: 540px;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+        }
+        .default-btn {
+            margin-top: 0;
+        }
+    }
+    .banner-image {
+        padding-top: 25px;
+        margin-left: 0;
+    
+        &::before {
+            display: none;
+        }
+        .woman {
+            .vector {
+                right: 60px;
+                top: 0;
+    
+                img {
+                    max-width: 290px;
+                }
+            }
+        }
+        .nail-img {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .banner-area {
+        .container-fluid {
+            max-width: 960px;
+            padding: {
+                left: var(--bs-gutter-x, .75rem);
+                right: var(--bs-gutter-x, .75rem);
+            };
+        }
+    }
+    .banner-content {
+        max-width: 100%;
+        
+        h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+    .banner-image {
+        padding-top: 70px;
+        margin-left: -100px;
+    
+        .woman {
+            max-width: 500px;
+    
+            img {
+                max-width: 400px;
+            }
+            .vector {
+                right: 80px;
+                top: 0;
+    
+                img {
+                    max-width: 200px;
+                }
+            }
+        }
+        .nail-img {
+            img {
+                max-width: 220px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .banner-area {
+        .container-fluid {
+            padding: {
+                left: 30px;
+                right: 30px;
+            };
+        }
+    }
+    .banner-content {
+        max-width: 100%;
+        
+        h1 {
+            font-size: 60px;
+        }
+    }
+    .banner-image {
+        .woman {
+            .vector {
+                right: 80px;
+                top: -30px;
+    
+                img {
+                    max-width: 250px;
+                }
+            }
+        }
+        .nail-img {
+            img {
+                max-width: 300px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .banner-area {
+        .container-fluid {
+            max-width: 1640px;
+            padding: {
+                left: var(--bs-gutter-x, .75rem);
+                right: var(--bs-gutter-x, .75rem);
+            };
+        }
+    }
+    .banner-content {
+        max-width: 700px;
+
+        h1 {
+            font-size: 75px;
+        }
+        p {
+            max-width: 620px;
+        }
+    }
+    .banner-image {
+        margin-left: -200px;
+        padding-top: 120px;
+
+        .woman {
+            max-width: 100%;
+
+            img {
+                max-width: 100%;
+            }
+            .vector {
+                right: 270px;
+                top: -62px;
+                
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+        .nail-img {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+}

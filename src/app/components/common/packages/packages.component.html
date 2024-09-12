@@ -1,0 +1,113 @@
+<!-- Default Section -->
+<div
+    class="pricing-area section-bg pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/pricing-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row">
+            <div
+                class="col-lg-6 col-md-6 col-sm-6"
+                *ngFor="let content of pricingCard"
+            >
+                <div class="pricing-card">
+                    <ul>
+                        <li
+                            *ngFor="let features of content.text"
+                        >
+                            <img [src]="features.image" alt="pricing" />
+                            <div class="content">
+                                <h3>{{features.title}} <span>{{features.price}}</span></h3>
+                                <p>{{features.desc}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="pricing-area section-bg pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2' || router.url === '/pricing-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-sm-6"
+                *ngFor="let content of pricingItem"
+            >
+                <div class="pricing-item">
+                    <img [src]="content.image" alt="shape" />
+                    <h3>{{content.title}}</h3>
+                    <ul>
+                        <li
+                            *ngFor="let list of content.featuresList"
+                        >
+                            <h3>{{list.title}} <span>{{list.price}}</span></h3>
+                            <p>{{list.subtext}}</p>
+                        </li>
+                    </ul>
+                    <a routerLink="{{content.buttonLink}}" class="default-btn with-icon">
+                        {{content.buttonText}} <i class="{{content.buttonIcon}}"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="pricing-area section-bg pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of pricingItemTwo"
+            >
+                <div class="pricing-item-two">
+                    <img [src]="content.image" alt="pricing" />
+                    <div class="content">
+                        <h2>{{content.subtext}} <span>{{content.price}}</span></h2>
+                        <h3>{{content.title}}</h3>
+                        <ul>
+                            <li
+                                *ngFor="let list of content.featuresList"
+                            >
+                                {{list.title}} <span>{{list.price}}</span>
+                            </li>
+                        </ul>
+                        <a routerLink="{{content.buttonLink}}" class="default-btn with-icon">
+                            {{content.buttonText}} <i class="{{content.buttonIcon}}"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,136 @@
+<!-- Default Section -->
+<div
+    class="about-area section-bg pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="row align-items-center"
+            *ngFor="let content of aboutContent"
+        >
+            <div class="col-lg-6 col-md-12">
+                <div class="about-item">
+                    <div class="about-slider">
+                        <div class="top-border"></div>
+                        <div class="bottom-border"></div>
+                        <owl-carousel-o [options]="imageSlides">
+                            <ng-template
+                                carouselSlide
+                                *ngFor="let image of content.image"
+                            >
+                                <div class="about-img">
+                                    <img [src]="image.img" alt="about-image" />
+                                </div>
+                            </ng-template>
+                        </owl-carousel-o>
+                    </div>
+                    <div class="about-vector">
+                        <img src="assets/images/about/about-vector.png" alt="About" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <div class="section-title">
+                        <span class="sub-title">{{content.subtitle}}</span>
+                        <h2>{{content.title}}</h2>
+                        <p>{{content.desc1}}</p>
+                        <p>{{content.desc2}}</p>
+                    </div>
+                    <a routerLink="{{content.link}}" class="default-btn with-icon">
+                        Learn More <i class="flaticon-040-right-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="about-area pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div
+            class="row align-items-center"
+            *ngFor="let content of aboutContent"
+        >
+            <div class="col-lg-6 col-md-12">
+                <div class="about-img-two">
+                    <div class="about-img-border-top"></div>
+                    <div class="about-img-border-bottom"></div>
+                    <img [src]="content.image2" alt="about-image" />
+                    <div class="sub-img">
+                        <img src="assets/images/about/about-vector3.png" alt="about-image" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <div class="section-title">
+                        <span class="sub-title">{{content.subtitle}}</span>
+                        <h2>{{content.title2}}</h2>
+                        <p>{{content.desc1}}</p>
+                        <p>{{content.desc2}}</p>
+                    </div>
+                    <a routerLink="{{content.link}}" class="default-btn with-icon">
+                        Learn More <i class="flaticon-040-right-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-shape">
+        <div class="shape1">
+            <img src="assets/images/about/about-vector2.png" alt="vector" />
+        </div>
+        <div class="shape2">
+            <img src="assets/images/about/about-vector4.png" alt="vector" />
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="about-area section-bg pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="row align-items-center"
+            *ngFor="let content of aboutContent"
+        >
+            <div class="col-lg-6 col-md-12">
+                <div class="about-img-three">
+                    <img [src]="content.image3" alt="about-image" />
+                    <div class="sub-img">
+                        <img [src]="content.image4" alt="about-image" />
+                    </div>
+                    <div class="content">
+                        <h3>{{content.experience}}</h3>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <div class="section-title">
+                        <span class="sub-title">{{content.subtitle}}</span>
+                        <h2>{{content.title3}}</h2>
+                        <p>{{content.desc1}}</p>
+                        <p>{{content.desc2}}</p>
+                    </div>
+                    <a routerLink="{{content.link}}" class="default-btn with-icon">
+                        Learn More <i class="flaticon-040-right-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-shape">
+        <div class="shape2">
+            <img src="assets/images/about/about-vector5.png" alt="vector" />
+        </div>
+    </div>
+</div>

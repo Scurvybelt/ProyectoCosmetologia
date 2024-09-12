@@ -1,0 +1,86 @@
+<!-- Default Section -->
+<div
+    class="features-area pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of featuresCard"
+            >
+                <div class="features-card">
+                    <div class="img">
+                        <img [src]="content.image" alt="features" />
+                    </div>
+                    <div class="content">
+                        <div class="top-icon">
+                            <i class="{{content.icon}}"></i>
+                        </div>
+                        <h3>
+                            <a routerLink="{{content.detailsLink}}">
+                                {{content.title}}
+                            </a>
+                        </h3>
+                        <a routerLink="{{content.detailsLink}}" class="more-btn">
+                            <i class="flaticon-040-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="features-area pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div class="row">
+            <div
+                class="col-lg-3 col-sm-6"
+                *ngFor="let content of featuresItem"
+            >
+                <div class="features-item">
+                    <div class="img">
+                        <img [src]="content.icon" alt="features" />
+                    </div>
+                    <div class="content">
+                        <h3>{{content.title}}</h3>
+                        <p>{{content.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="features-area pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of featuresCardTwo"
+            >
+                <div class="features-card-two">
+                    <img [src]="content.image" alt="features" />
+                    <div class="content">
+                        <i class="{{content.icon}}"></i>
+                        <h3>
+                            <a routerLink="{{content.detailsLink}}">
+                                {{content.title}}
+                            </a>
+                        </h3>
+                        <p>{{content.desc}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

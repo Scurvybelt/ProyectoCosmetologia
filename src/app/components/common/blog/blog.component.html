@@ -1,0 +1,116 @@
+<!-- Default Section -->
+<div
+    class="blog-area pt-100 pb-75 section-bg"
+    [ngClass]="{'d-none': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of blogCard.slice(0, 3)"
+            >
+                <div class="blog-card">
+                    <a routerLink="{{content.detailsLink}}" class="img">
+                        <img [src]="content.image" alt="blog-image" />
+                    </a>
+                    <div class="content">
+                        <ul class="meta">
+                            <li>
+                                <i class="flaticon-058-user"></i>
+                                <a routerLink="/blog-grid">{{content.author}}</a>
+                            </li>
+                            <li>
+                                <i class="flaticon-047-calendar-1"></i>
+                                {{content.date}}
+                            </li>
+                        </ul>
+                        <h3><a routerLink="{{content.detailsLink}}">
+                            {{content.title}}
+                        </a></h3>
+                        <a routerLink="{{content.detailsLink}}" class="default-btn with-icon">
+                            Read More <i class="flaticon-040-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="blog-area pt-100 pb-75 section-bg d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of blogCard.slice(0, 3)"
+            >
+                <div class="blog-item">
+                    <div class="content">
+                        <div class="blog-top">
+                            <div class="date">
+                                <i class="ri-time-line"></i>
+                                {{content.date}}
+                            </div>
+                            <div class="blog-top-right">
+                                <div class="comment">
+                                    <a routerLink="/blog-details">
+                                        <i class="ri-chat-3-line"></i>
+                                    </a>
+                                </div>
+                                <ul class="social-links">
+                                    <li class="share-btn">
+                                        <i class="ri-stackshare-line"></i>
+                                    </li>
+                                    <li>
+                                        <a href="https://vimeo.com/" target="_blank">
+                                            <i class="ri-vimeo-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" target="_blank">
+                                            <i class="ri-twitter-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/" target="_blank">
+                                            <i class="ri-linkedin-fill"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/" target="_blank">
+                                            <i class="ri-facebook-fill"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> 
+                        </div>
+                        <h3><a routerLink="{{content.detailsLink}}">
+                            {{content.title}}
+                        </a></h3>
+                    </div>
+                    <a routerLink="{{content.detailsLink}}" class="img">
+                        <img [src]="content.image" alt="blog-image" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

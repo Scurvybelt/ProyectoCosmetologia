@@ -1,0 +1,117 @@
+<!-- Default Section -->
+<div
+    class="testimonial-area section-bg pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="testimonial-slider">
+            <owl-carousel-o [options]="testimonialSlides">
+                <ng-template
+                    carouselSlide
+                    *ngFor="let content of testimonialCard"
+                >
+                    <div class="testimonial-item">
+                        <img [src]="content.img" alt="testimonial" />
+                        <h3>{{content.name}}</h3>
+                        <p>{{content.desc}}</p>
+                        <div class="rating">
+                            <i
+                                class="{{star.icon}}"
+                                *ngFor="let star of content.rating"
+                            ></i>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="testimonial-area section-bg pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="testimonial-slider-two">
+            <owl-carousel-o [options]="testimonialSlidesTwo">
+                <ng-template
+                    carouselSlide
+                    *ngFor="let content of testimonialCard"
+                >
+                    <div class="testimonial-card">
+                        <div class="testimonial-img">
+                            <img [src]="content.img" alt="testimonial" />
+                            <i class="flaticon-074-right-quote"></i>
+                        </div>
+                        <div class="content">
+                            <p>{{content.desc}}</p>
+                            <h3>{{content.name}} <span>/{{content.designation}}</span></h3>
+                            <div class="rating">
+                                <i
+                                    class="{{star.icon}}"
+                                    *ngFor="let star of content.rating"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="testimonial-area section-bg ptb-100 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="testimonial-slider-three">
+            <owl-carousel-o [options]="testimonialSlidesThree">
+                <ng-template
+                    carouselSlide
+                    *ngFor="let content of testimonialCard"
+                >
+                    <div class="testimonial-card">
+                        <div class="testimonial-img">
+                            <img [src]="content.img" alt="testimonial" />
+                            <i class="flaticon-074-right-quote"></i>
+                        </div>
+                        <div class="content">
+                            <p>{{content.desc}}</p>
+                            <h3>{{content.name}} <span>/{{content.designation}}</span></h3>
+                            <div class="rating">
+                                <i
+                                    class="{{star.icon}}"
+                                    *ngFor="let star of content.rating"
+                                ></i>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

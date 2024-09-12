@@ -1,0 +1,95 @@
+<!-- Default Section -->
+<div
+    class="team-area pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+            <div class="section-vector">
+                <img src="assets/images/shape/section-vector.png" alt="vector" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of teamContent"
+            >
+                <div class="team-card">
+                    <div class="team-img">
+                        <a routerLink="{{content.detailsLink}}" class="d-block">
+                            <img [src]="content.image" alt="team-image" />
+                        </a>
+                        <ul class="social-links-btn">
+                            <li class="share-btn">
+                                <i class="flaticon-040-right-arrow"></i>
+                            </li>
+                            <li *ngFor="let item of content.socials">
+                                <a href="{{item.link}}" target="_blank">
+                                    <i class="{{item.icon}}"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a routerLink="{{content.detailsLink}}">
+                                {{content.name}}
+                            </a>
+                        </h3>
+                        <span>{{content.designation}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 & 3 -->
+<div
+    class="team-area pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-sm-6 col-md-6"
+                *ngFor="let content of teamContent"
+            >
+                <div class="team-card">
+                    <div class="team-img">
+                        <a routerLink="{{content.detailsLink}}" class="d-block">
+                            <img [src]="content.image" alt="team-image" />
+                        </a>
+                    </div>
+                    <div class="content text-center">
+                        <h3>
+                            <a routerLink="{{content.detailsLink}}">
+                                {{content.name}}
+                            </a>
+                        </h3>
+                        <span>{{content.designation}}</span>
+                        <ul class="social-links">
+                            <li *ngFor="let item of content.socials">
+                                <a href="{{item.link}}" target="_blank">
+                                    <i class="{{item.icon}}"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

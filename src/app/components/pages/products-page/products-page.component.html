@@ -1,0 +1,193 @@
+<!-- Inner Banner -->
+<div class="inner-banner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="inner-title">
+                    <h2>Products</h2>
+                    <ul>
+                        <li>
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li>Products</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <div class="inner-img">
+                    <img src="assets/images/inner-banner/inner-banner5.png" alt="inner-banner" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Products -->
+<div class="products-area ptb-100">
+    <div class="container">
+        <div class="row">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of products | paginate: { itemsPerPage: 9, currentPage }"
+            >
+                <div class="products-card">
+                    <div class="product-img">
+                        <a
+                            [routerLink]="['/product', content.slug]"
+                            class="d-block"
+                        >
+                            <img [src]="content.image" alt="product-image" />
+                        </a>
+                        <ul class="products-action">
+                            <li>
+                                <button
+                                    (click)="addToCart(content)"
+                                >
+                                    <i class="ri-shopping-cart-line"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <a routerLink="/compare">
+                                    <i class="ri-arrow-left-right-line"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <button
+                                    type="button"
+                                    (click)="
+                                        openModal(template);
+                                        addToModal(content)
+                                    "
+                                >
+                                    <i class="ri-eye-line"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <a routerLink="/wishlist">
+                                    <i class="ri-heart-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <h3>
+                            <a [routerLink]="['/product', content.slug]">
+                                {{content.title}}
+                            </a>
+                        </h3>
+                        <div class="price">
+                            <span class="old-price" *ngIf="content.oldPrice">
+                                {{content.currencyType}}{{content.oldPrice}}
+                            </span>
+                            <span class="new-price">
+                                {{content.currencyType}}{{content.currentPrice}}
+                            </span>
+                        </div>
+                        <div class="rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="pagination-area">
+                    <pagination-controls previousLabel="" nextLabel="" (pageChange)="onPageChange($event)"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quickview Modal -->
+<ng-template #template>
+    <button type="button" class="close" (click)="modalRef?.hide()">
+        <i class="flaticon-036-close"></i>
+    </button>
+    <div
+        class="modal-body"
+        *ngIf="modalProduct"
+    >
+        <div
+            class="row align-items-center"
+            *ngFor="let product of modalProduct;"
+        >
+            <div class="col-lg-6 col-md-12">
+                <div class="product-details-image">
+                    <img [src]="product.image" alt="image" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="product-details-desc">
+                    <h3>{{product.title}}</h3>
+                    <div class="price">
+                        <span class="old-price" *ngIf="product.oldPrice">
+                            {{product.currencyType}}{{product.oldPrice}}
+                        </span>
+                        <span class="new-price">
+                            {{product.currencyType}}{{product.currentPrice}}
+                        </span>
+                    </div>
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                        <i class="ri-star-line"></i>
+                    </div>
+                    <p>{{product.shortDesc}}</p>
+                    <ul class="product-category-list">
+                        <li
+                            *ngIf="product.availability"
+                        >
+                            Availability: <span>In Stock</span>
+                        </li>
+                    </ul>
+                    <div class="product-add-btn">
+                        <button
+                            type="submit"
+                            class="default-btn with-icon"
+                            (click)="addToCart(product)"
+                        >
+                            Add To Cart <i class="flaticon-034-shopping-cart"></i>
+                        </button>
+                        <ul class="products-action">
+                            <li><a routerLink="/compare"><i class="ri-arrow-left-right-line"></i></a></li>
+                            <li><a routerLink="/wishlist"><i class="ri-heart-line"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product-share">
+                        <ul>
+                            <li>
+                                <span>Share:</span>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="ri-facebook-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/" target="_blank">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/" target="_blank">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://vimeo.com/" target="_blank">
+                                    <i class="ri-vimeo-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

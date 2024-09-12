@@ -1,0 +1,276 @@
+.team-details-img {
+    margin-bottom: 25px;
+}
+.team-details-content {
+    margin-bottom: 25px;
+    padding-left: 15px;
+
+    h3 {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+    span {
+        color: var(--mainColor);
+    }
+    .social-links {
+        list-style-type: none;
+        padding-left: 0;
+        margin: {
+            bottom: 20px;
+            top: 20px;
+        };
+        li {
+           display: inline-block;
+           margin-right: 10px;
+
+            a {
+                width: 45px;
+                height: 45px;
+                display: block;
+                font-size: 20px;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 50%;
+                color: var(--mainColor);
+                background-color: var(--whiteColor);
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+
+                &:hover {
+                    background-color: var(--mainColor);
+                    color: var(--whiteColor);
+                }
+            }
+            &:last-child {
+               margin-right: 0;
+            }
+        }
+    }
+    .info {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            color: var(--titleColor);
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 28px;
+            max-width: 300px;
+            font: {
+                size: 18px;
+                weight: 600;
+                family: var(--headerFonts);
+            };
+            i {
+                color: var(--mainColor);
+                position: absolute;
+                top: 2px;
+                left: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            span {
+                float: right;
+                color: var(--bodyColor);
+                font: {
+                    size: 16px;
+                    weight: 500;
+                    family: var(--bodyFonts);
+                };
+            }
+        }
+    }
+}
+.skill-bar {
+    margin-bottom: 25px;
+
+    .progress-title-holder {
+        position: relative;
+        margin-bottom: 12px;
+    }
+    .progress-title {
+        color: var(--titleColor);
+        font: {
+            size: 18px;
+            weight: 600;
+        };
+    }
+    .percent {
+        right: 0;
+        bottom: 1px;
+        position: absolute;
+        font: {
+            size: 17px;
+            weight: 500;
+            family: var(--bodyFonts);
+        };
+    }
+    .progress-content-outter {
+        height: 10px;
+        border-radius: 0;
+        background-color: #faefed;
+    }
+    .progress-content {
+        height: 10px;
+        border-radius: 0;
+        background-color: #e2b3ac;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .team-details-content {
+        padding-left: 0;
+    
+        h3 {
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .social-links {
+            margin: {
+                bottom: 15px;
+                top: 15px;
+            };
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .info {
+            li {
+                padding-left: 22px;
+                max-width: 100%;
+                font-size: 15px;
+
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .skill-bar {
+        .progress-title-holder {
+            margin-bottom: 10px;
+        }
+        .progress-title {
+            font-size: 15px;
+        }
+        .percent {
+            font-size: 15px;
+        }
+        .progress-content-outter {
+            height: 8px;
+        }
+        .progress-content {
+            height: 8px;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .team-details-content {
+        padding-left: 0;
+    
+        h3 {
+            font-size: 20px;
+        }
+        .social-links {
+            margin: {
+                bottom: 15px;
+                top: 15px;
+            };
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .info {
+            li {
+                padding-left: 26px;
+                max-width: 300px;
+                font-size: 16px;
+                
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .skill-bar {
+        .progress-title {
+            font-size: 16px;
+        }
+        .percent {
+            font-size: 16px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .team-details-content {
+        padding-left: 0;
+    
+        h3 {
+            font-size: 22px;
+        }
+        .social-links {
+            margin: {
+                bottom: 15px;
+                top: 15px;
+            };
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .info {
+            li {
+                padding-left: 26px;
+                max-width: 300px;
+                font-size: 16px;
+                
+                span {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .skill-bar {
+        .progress-title {
+            font-size: 17px;
+        }
+        .percent {
+            font-size: 16px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

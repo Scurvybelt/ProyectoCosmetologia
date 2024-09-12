@@ -1,0 +1,73 @@
+<!-- Default Section -->
+<div
+    class="intro-video-area pb-100"
+    style="background-image: url(assets/images/video/video-bg.jpg);"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div class="video-content">
+            <img src="assets/images/video/video-img.jpg" alt="video-image">
+            <button class="play-btn" (click)="openPopup()">
+                <i class="ri-play-fill"></i>
+            </button>
+        </div>
+        <div class="section-title text-center pt-100">
+            <span class="sub-title">You're Welcomed!</span>
+            <h2>We Care About Your Nail And Your well-Being</h2>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="intro-video-bg d-none"
+    style="background-image: url(assets/images/video/video-bg2.jpg);"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div class="video-content-two">
+            <button class="play-btn" (click)="openPopup()">
+                <i class="ri-play-fill"></i>
+            </button>
+            <div class="section-title text-center">
+                <span class="sub-title">You're Welcomed!</span>
+                <h2>We Care About Your Nail And Your well-Being</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="intro-video-bg2 ptb-100 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+    style="background-image: url(assets/images/video/video-bg3.jpg);"
+>
+    <div class="container">
+        <div class="video-content-two-bg ptb-100">
+            <button class="play-btn" (click)="openPopup()">
+                <i class="ri-play-fill"></i>
+            </button>
+            <div class="section-title text-center">
+                <span class="sub-title">You're Welcomed!</span>
+                <h2>We Care About Your Nail And Your well-Being</h2>
+            </div>
+            <div class="top-vector">
+                <img src="assets/images/video/video-vector2.png" alt="video-image" />
+            </div>
+            <div class="bottom-vector">
+                <img src="assets/images/video/video-vector1.png" alt="video-image" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Popup -->
+<div class="video-popup" *ngIf="isOpen">
+    <div class="popup-inner">
+        <iframe src="https://www.youtube.com/embed/XNQk1qt__Vw" title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn">
+            <i class="ri-close-line"></i>
+        </button>
+    </div>
+</div>

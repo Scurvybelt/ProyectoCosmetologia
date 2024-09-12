@@ -1,0 +1,132 @@
+<!-- Inner Banner -->
+<div class="inner-banner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="inner-title">
+                    <h2>Shopping Cart</h2>
+                    <ul>
+                        <li>
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li>Cart</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <div class="inner-img">
+                    <img src="assets/images/inner-banner/inner-banner7.png" alt="inner-banner" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cart -->
+<div class="cart-area ptb-100">
+    <div class="container">
+        <div class="empty-cart" *ngIf="products.length == 0; else cartForm">
+            <p>Your cart is currently empty.</p>
+            <a routerLink="/shop" class="default-btn">Return to Shop</a>
+        </div>
+        <ng-template #cartForm>
+            <form>
+                <div class="cart-table table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product Details</th>
+                                <th scope="col">Unit Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Total</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let product of products">
+                                <td class="product-thumbnail">
+                                    <a [routerLink]="['/product', product.slug]">
+                                        <img [src]="product.image" alt="product-image">
+                                        <h3>
+                                            {{product.title}}
+                                        </h3>
+                                    </a>
+                                </td>
+                                <td>
+                                    {{product.currencyType
+                                    }}{{product.currentPrice}}
+                                </td>
+                                <td class="product-quantity">
+                                    <div class="input-counter">
+                                        <span
+                                            class="minus-btn"
+                                            (click)="
+                                                minus(product.id)
+                                            "
+                                        >
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                        <input
+                                            type="text"
+                                            value="{{
+                                                product.quantity
+                                            }}"
+                                        />
+                                        <span
+                                            class="plus-btn"
+                                            (click)="
+                                                plus(product.id)
+                                            "
+                                        >
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    ${{
+                                        (
+                                            product.quantity *
+                                            product.currentPrice
+                                        ).toFixed(2)
+                                    }}
+                                </td>
+                                <td>
+                                    <button
+                                        (click)="
+                                            onDeleteItem(product.id)
+                                        "
+                                        class="remove"
+                                    >
+                                        <i class="flaticon-036-close"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cart-buttons">
+                    <div class="row">
+                        <div class="col-lg-7 col-sm-12 col-md-7">
+                            <div class="shopping-coupon-code">
+                                <input type="text" class="form-control" placeholder="Coupon code">
+                                <button type="submit">Apply Coupon</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-sm-12 col-md-5">
+                            <div class="cart-totals">
+                                <ul>
+                                    <li>Subtotal <span>${{total}}</span></li>
+                                    <li>Shipping <span>$00.00</span></li>
+                                    <li>Total <span>${{total}}</span></li>
+                                </ul>
+                                <a routerLink="/checkout" class="default-btn">
+                                    Proceed to Checkout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,144 @@
+<!-- Default Section -->
+<div
+    class="services-area ptb-100"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+            <div class="section-vector">
+                <img src="assets/images/shape/section-vector.png" alt="vector" />
+            </div>
+        </div>
+        <div class="row">
+            <div
+                class="col-xl-4 col-lg-6 col-sm-6"
+                *ngFor="let content of servicesCard"
+            >
+                <div class="services-card">
+                    <a routerLink="{{content.detailsLink}}" class="d-block img">
+                        <img [src]="content.image" alt="services-image" />
+                    </a>
+                    <div class="content">
+                        <h3><a routerLink="{{content.detailsLink}}">
+                            {{content.title}}
+                        </a></h3>
+                        <a routerLink="{{content.detailsLink}}" class="more-btn">
+                            <i class="flaticon-040-right-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <div class="view-more-btn text-center">
+                    <a routerLink="/services" class="default-btn with-icon">
+                        See All Services <i class="flaticon-030-next"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="services-vector">
+            <img src="assets/images/services/services-vector.png" alt="vector" />
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="services-area section-bg pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="services-slider">
+            <owl-carousel-o [options]="servicesSlides">
+                <ng-template
+                    carouselSlide
+                    *ngFor="let content of servicesItem"
+                >
+                    <div class="services-item">
+                        <div class="services-img">
+                            <a routerLink="{{content.detailsLink}}" class="d-block">
+                                <img [src]="content.image" alt="services-image" />
+                            </a>
+                            <div class="top-icon"><i class="{{content.icon}}"></i></div>
+                        </div>
+                        <div class="content">
+                            <h3><a routerLink="{{content.detailsLink}}">
+                                {{content.title}}
+                            </a></h3>
+                            <a routerLink="{{content.detailsLink}}" class="default-btn with-icon">
+                                Learn More
+                                <i class="flaticon-040-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="services-area ptb-100 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div
+            class="section-title text-center"
+            *ngFor="let content of sectionTitle"
+        >
+            <span class="sub-title">{{content.subtitle}}</span>
+            <h2>{{content.title}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of servicesItemTwo"
+            >
+                <div class="services-item-two">
+                    <a routerLink="{{content.detailsLink}}" class="d-block">
+                        <img [src]="content.image" alt="services-image" />
+                    </a>
+                    <div class="content">
+                        <div class="icon">
+                           <i class="{{content.icon}}"></i>
+                        </div>
+                        <h3><a routerLink="{{content.detailsLink}}">
+                            {{content.title}}
+                        </a></h3>
+                        <p>{{content.desc}}</p>
+                        <a routerLink="{{content.detailsLink}}" class="default-btn with-icon">
+                            Learn More
+                            <i class="flaticon-040-right-arrow"></i>
+                        </a>
+                        <div class="content-right">
+                            <img src="assets/images/services/services-vector-2.png" alt="Service" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="view-more-btn text-center">
+                    <a routerLink="/shop" class="default-btn with-icon">
+                        See All Services <i class="flaticon-030-next"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services-shape">
+        <img src="assets/images/services/services-vector-3.png" alt="vector" />
+    </div>
+</div>

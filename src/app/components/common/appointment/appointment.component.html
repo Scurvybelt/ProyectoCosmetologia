@@ -1,0 +1,251 @@
+<!-- Default Section -->
+<div
+    class="booking-area pt-100 pb-75"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/about' || router.url === '/appointment'}"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="book-img">
+                    <img src="assets/images/book/book-img1.jpg" alt="book" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="booking-form">
+                    <div class="section-title">
+                        <span class="sub-title">For Your Service</span>
+                        <h2>Make An Appointment</h2>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-select form-control">
+                                        <option selected>2 Person</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">4 Person</option>
+                                        <option value="3">7 Person</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Date" bsDatepicker>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <button type="submit" class="default-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 2 -->
+<div
+    class="booking-area-two pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-2' || router.url === '/about' || router.url === '/appointment'}"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="book-img-two">
+                    <img src="assets/images/book/book-img2.jpg" alt="book" />
+                    <div class="book-shape1">
+                        <img src="assets/images/book/book-shape.png" alt="book" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="booking-form">
+                    <div class="section-title">
+                        <span class="sub-title">For Your Service</span>
+                        <h2>Make An Appointment</h2>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-select form-control">
+                                        <option selected>2 Person</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">4 Person</option>
+                                        <option value="3">7 Person</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Date" bsDatepicker>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <button type="submit" class="default-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 3 -->
+<div
+    class="booking-area-two pt-100 pb-75 d-none"
+    [ngClass]="{'d-block': router.url === '/index-3'}"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="booking-form two">
+                    <div class="section-title">
+                        <span class="sub-title">For Your Service</span>
+                        <h2>Make An Appointment</h2>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Phone Number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <select class="form-select form-control">
+                                        <option selected>2 Person</option>
+                                        <option value="1">1 Person</option>
+                                        <option value="2">4 Person</option>
+                                        <option value="3">7 Person</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Date" bsDatepicker>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <textarea name="message" class="form-control" cols="30" rows="5" placeholder="Your Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <button type="submit" class="default-btn">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="book-img-three">
+                    <div class="row">
+                        <div class="col-lg-6 col-6">
+                            <div class="book-img-bg">
+                                <img src="assets/images/book/book-img3.jpg" alt="instagram-image">
+                                <a href="https://www.instagram.com/?hl=en" target="_blank" class="follow-btn">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <div class="book-img-bg">
+                                <img src="assets/images/book/book-img4.jpg" alt="instagram-image">
+                                <a href="https://www.instagram.com/?hl=en" target="_blank" class="follow-btn">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <div class="book-img-bg">
+                                <img src="assets/images/book/book-img5.jpg" alt="instagram-image">
+                                <a href="https://www.instagram.com/?hl=en" target="_blank" class="follow-btn">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-6">
+                            <div class="book-img-bg">
+                                <img src="assets/images/book/book-img6.jpg" alt="instagram-image">
+                                <a href="https://www.instagram.com/?hl=en" target="_blank" class="follow-btn">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book-shape">
+        <img src="assets/images/book/book-shape2.png" alt="shape" />
+    </div>
+</div>

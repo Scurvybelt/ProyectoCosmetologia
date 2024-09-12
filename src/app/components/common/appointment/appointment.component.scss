@@ -1,0 +1,289 @@
+.booking-area {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        top: 0;
+        left: 0;
+        width: 40%;
+        content: '';
+        z-index: -1;
+        height: 100%;
+        position: absolute;
+        background-color: #efcec9;
+    }
+}
+.book-img {
+    margin-bottom: 25px;
+}
+.booking-form {
+    margin-bottom: 25px;
+    padding-left: 20px;
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+    .form-group {
+        margin-bottom: 25px;
+
+        .form-control {
+            border: 1px solid rgba(238, 238, 238, 1);
+            background-color: transparent;
+            box-shadow: unset !important;
+            font-size: var(--fontSize);
+            color: var(--titleColor);
+            padding: 10px 18px;
+            border-radius: 0;
+            height: 60px;
+            width: 100%;
+
+            &::placeholder {
+                opacity: .80;
+                color: var(--bodyColor);
+                transition: var(--transition);
+            }
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        .form-select {
+            color: var(--bodyColor);
+            cursor: pointer;
+        }
+        textarea.form-control {
+            height: auto;
+            padding-top: 18px;
+        }
+    }
+    &.two {
+        padding: {
+            left: 0;
+            right: 20px;
+        };
+    }
+}
+.book-img-two {
+    z-index: 1;
+    max-width: 610px;
+    position: relative;
+    margin: 20px 20px 65px;
+
+    &::before {
+        background-color: transparent;
+        border: 1px solid #911439;
+        position: absolute;
+        bottom: -20px;
+        height: 100%;
+        left: -20px;
+        width: 100%;
+        z-index: -1;
+        content: '';
+    }
+    &::after {
+        background-color: transparent;
+        border: 1px solid #911439;
+        position: absolute;
+        height: 100%;
+        right: -20px;
+        width: 100%;
+        z-index: -1;
+        content: '';
+        top: -20px;
+    }
+    .book-shape1 {
+        position: absolute;
+        bottom: -70px;
+        left: -50px;
+
+        img {
+            animation: moveleftbounce 7s linear infinite;
+        }
+    }
+}
+.book-img-three {
+    .book-img-bg {
+        margin-bottom: 25px;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: var(--transition);
+            background-color: var(--titleColor);
+        }
+        .follow-btn {
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            z-index: 2;
+            line-height: 1;
+            display: block;
+            font-size: 30px;
+            position: absolute;
+            text-align: center;
+            color: var(--whiteColor);
+            transition: var(--transition);
+            transform: translateX(-50%) translateY(-50%);
+        }
+        &:hover {
+            &::before {
+                opacity: 0.5;
+            }
+            .follow-btn {
+                opacity: 1;
+            }
+        }
+    }
+}
+.book-shape {
+    top: 30px;
+    right: 5%;
+    z-index: -1;
+    position: absolute;
+
+    img {
+        animation: moveleftbounce 7s linear infinite;
+    }
+}
+.d-none {
+    &.d-block {
+        display: block !important;
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .booking-area {
+        &::before {
+            display: none;
+        }
+    }
+    .booking-form {
+        padding-left: 0;
+    
+        .section-title {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+    
+            .form-control {
+                height: 50px;
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+            textarea.form-control {
+                padding-top: 12px;
+            }
+        }
+        &.two {
+            padding-right: 0;
+        }
+    }
+    .book-img-two {
+        max-width: 100%;
+        margin: 0 0 25px;
+    
+        &::before {
+            display: none;
+        }
+        &::after {
+            display: none;
+        }
+        .book-shape1 {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .booking-form {
+        .section-title {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .booking-area {
+        &::before {
+            display: none;
+        }
+    }
+    .booking-form {
+        padding-left: 0;
+    
+        .section-title {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+    
+            .form-control {
+                padding: 10px 15px;
+                font-size: 15px;
+                height: 53px;
+            }
+            textarea.form-control {
+                padding-top: 15px;
+            }
+        }
+        &.two {
+            padding-right: 0;
+        }
+    }
+    .book-img-two {
+        margin-bottom: 90px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .booking-form {
+        padding-left: 0;
+    
+        .section-title {
+            margin-bottom: 25px;
+        }
+        .form-group {
+            .form-control {
+                padding: 10px 15px;
+                height: 50px;
+            }
+            textarea.form-control {
+                padding-top: 15px;
+            }
+        }
+        &.two {
+            padding-right: 0;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

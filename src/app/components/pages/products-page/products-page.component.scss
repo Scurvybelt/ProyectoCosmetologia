@@ -1,0 +1,65 @@
+@import "../../common/products/products.component.scss";
+
+.products-topper {
+    margin-bottom: 35px;
+
+    .product-list {
+        .form-select {
+            cursor: pointer;
+            border-radius: 0;
+            box-shadow: unset;
+            padding: 12px 18px;
+            border-color: #eeeeee;
+            color: var(--titleColor);
+            transition: var(--transition);
+
+            &:focus {
+                border-color: var(--mainColor);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .products-topper {
+        margin-bottom: 30px;
+        text-align: center;
+    
+        .product-list {
+            margin-top: 15px;
+
+            .form-select {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .products-topper {
+        .product-list {
+            .form-select {
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

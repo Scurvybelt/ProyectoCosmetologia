@@ -1,0 +1,342 @@
+.footer-bg {
+    background-color: #f9f9f9;
+}
+.footer-widget {
+    margin-bottom: 25px;
+
+    .footer-logo {
+        margin-bottom: 20px;
+        display: inline-block;
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .social-link {
+        list-style-type: none;
+        padding-left: 0;
+        margin: {
+            bottom: 0;
+            top: 20px;
+        };
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                color: var(--mainColor);
+                border: 1px solid #ede4e4;
+                background-color: transparent;
+                
+                &:hover {
+                    background-color: var(--mainColor);
+                    border-color: var(--mainColor);
+                    color: var(--whiteColor);
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .salon-hours {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style-type: none;
+
+        li {
+            margin-bottom: 15px;
+
+            h3 {
+                margin-bottom: 5px;
+                font: {
+                    weight: 500;
+                    size: var(--fontSize);
+                    family: var(--bodyFonts);
+                };
+            }
+            span {
+                color: var(--bodyColor);
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .footer-contact {
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+
+        li {
+            padding-left: 60px;
+            position: relative;
+            margin-bottom: 15px;
+
+            i {
+                left: 0;
+                top: 2px;
+                width: 45px;
+                height: 45px;
+                line-height: 50px;
+                position: absolute;
+                text-align: center;
+                border-radius: 50px;
+                display: inline-block;
+                color: var(--mainColor);
+                border: 1px solid #ede4e4;
+                background-color: transparent;
+                transition: var(--transition);
+            }
+            h4 {
+                font-size: var(--fontSize);
+                margin-bottom: 5px;
+                font: {
+                    family: var(--bodyFonts);
+                    weight: 600;
+                };
+            }
+            span {
+                color: var(--bodyColor);
+
+                a {
+                    color: var(--bodyColor);
+
+                    &:hover {
+                        color: var(--mainColor);
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                i {
+                    background-color: var(--mainColor);
+                    border-color: var(--mainColor);
+                    color: var(--whiteColor);
+                }
+            }
+        }
+    }
+    .newsletter-form {
+        .form-control {
+            background-color: #faefed;
+            font-size: var(--fontSize);
+            color: var(--titleColor);
+            margin-bottom: 20px;
+            box-shadow: unset;
+            border-radius: 0;
+            padding: 0 20px;
+            border: none;
+            height: 58px;
+
+            &::placeholder {
+                color: var(--bodyColor);
+                transition: var(--transition);
+            }
+            &:focus {
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        .subscribe-btn {
+            background-color: var(--mainColor);
+            transition: var(--transition);
+            color: var(--whiteColor);
+            text-align: center;
+            padding: 14px 25px;
+            display: block;
+            width: 100%;
+            border: 0;
+
+            i {
+                position: relative;
+                margin-left: 10px;
+                top: 3px;
+            }
+            &:hover {
+                background-color: var(--titleColor);
+            }                  
+        }
+        p {
+            margin-top: 13px;
+            font: {
+                size: 13px;
+                style: italic;
+            };
+        }
+    }
+}
+.copyright-area {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: {
+        top: 20px;
+        bottom: 20px;
+    };
+    p {
+        a {
+            font-weight: 500;
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .footer-widget {
+        .footer-logo {
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .social-link {
+            margin-top: 15px;
+
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border-radius: 38px;
+                }
+            }
+        }
+        &.ps-5 {
+            padding-left: 0 !important;
+        }
+        &.pe-2 {
+            padding-right: 0 !important;
+        }
+        .salon-hours {
+            li {
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+        .footer-contact {
+            li {
+                padding-left: 50px;
+    
+                i {
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 43px;
+                }
+                h4 {
+                    font-size: 14px;
+                }
+            }
+        }
+        .newsletter-form {
+            .form-control {
+                margin-bottom: 15px;
+                font-size: 14px;
+                padding: 0 15px;
+                height: 52px;
+            }
+        }
+    }
+    .copyright-area {
+        padding: {
+            top: 15px;
+            bottom: 15px;
+        };
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .footer-widget {
+        .footer-logo {
+            margin-bottom: 15px;
+        }
+        h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+        .social-link {
+            margin-top: 15px;
+
+            li {
+                a {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+        .salon-hours {
+            li {
+                h3 {
+                    font-size: 14px;
+                }
+            }
+        }
+        .footer-contact {
+            li {
+                padding-left: 52px;
+    
+                i {
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                h4 {
+                    font-size: 14px;
+                }
+            }
+        }
+        .newsletter-form {
+            .form-control {
+                margin-bottom: 15px;
+                padding: 0 18px;
+                font-size: 15px;
+                height: 55px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .footer-widget {
+        h3 {
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        &.ps-5 {
+            padding-left: 1rem !important;
+        }
+        &.pe-2 {
+            padding-right: 0 !important;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,68 @@
+<!-- Inner Banner -->
+<div class="inner-banner">
+    <div class="container-fluid">
+        <div
+            class="row align-items-center"
+            *ngFor="let title of pageTitle"
+        >
+            <div class="col-lg-7 col-md-8">
+                <div class="inner-title">
+                    <h2>{{title.title}}</h2>
+                    <ul>
+                        <li>
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li>{{title.title}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <div class="inner-img">
+                    <img [src]="title.img" alt="inner-banner" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Services -->
+<div class="services-area ptb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div
+                class="col-lg-4 col-md-6 col-sm-6"
+                *ngFor="let content of servicesItem | paginate: { itemsPerPage: 6, currentPage }"
+            >
+                <div class="services-item-two">
+                    <a routerLink="{{content.detailsLink}}" class="d-block">
+                        <img [src]="content.image" alt="services-image" />
+                    </a>
+                    <div class="content">
+                        <div class="icon">
+                           <i class="{{content.icon}}"></i>
+                        </div>
+                        <h3><a routerLink="{{content.detailsLink}}">
+                            {{content.title}}
+                        </a></h3>
+                        <p>{{content.desc}}</p>
+                        <a routerLink="{{content.detailsLink}}" class="default-btn with-icon">
+                            Learn More
+                            <i class="flaticon-040-right-arrow"></i>
+                        </a>
+                        <div class="content-right">
+                            <img src="assets/images/services/services-vector-2.png" alt="Service" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-12 col-lg-12 col-sm-12">
+                <div class="pagination-area">
+                    <pagination-controls previousLabel="" nextLabel="" (pageChange)="onPageChange($event)"></pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="services-shape">
+        <img src="assets/images/services/services-vector-3.png" alt="vector" />
+    </div>
+</div>
