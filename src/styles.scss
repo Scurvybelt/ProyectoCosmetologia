@@ -3,6 +3,7 @@
     --headerFonts: 'Playfair Display', serif;
     --bodyFonts: 'Rubik', sans-serif;
     --mainColor: #00A1A3;
+    --colorSecundario: #4F338A;
     --titleColor: #202031;
     --bodyColor: #555555;
     --whiteColor: #ffffff;
@@ -407,7 +408,7 @@ p {
 
 // Inner Banner
 .inner-banner {
-    background-color: #efcec9;
+    background-color: rgba(78,61,153,5);
     padding: {
         top: 50px;
         bottom: 25px;

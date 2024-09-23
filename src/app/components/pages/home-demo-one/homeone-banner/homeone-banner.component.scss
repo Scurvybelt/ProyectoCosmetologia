@@ -1,5 +1,5 @@
 .banner-area {
-    background-color: #efcec9;
+    background-color: rgba(78,61,153,5);
     position: relative;
     z-index: 1;
 
@@ -40,7 +40,7 @@
         height: 100%;
         position: absolute;
         transform: translateX(-50%);
-        background-color: rgba(226, 179, 172, 1);
+        background-color: var(--mainColor);
     }
     .woman {
         position: relative;
@@ -72,7 +72,7 @@
         img {
             max-width: 350px;
             border-radius: 15px;
-            border: 5px solid #e2b3ac;
+            border: 5px solid var(--mainColor);
         }
     }
 }
