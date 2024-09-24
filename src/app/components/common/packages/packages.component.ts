@@ -16,8 +16,8 @@ export class PackagesComponent implements OnInit {
 
     sectionTitle = [
         {
-            subtitle: `Best Deals`,
-            title: `Our Best Price Packages`
+            subtitle: `Con los mejores precios`,
+            title: `Nuestros Paquetes`
         }
     ]
     pricingCard = [
@@ -69,22 +69,37 @@ export class PackagesComponent implements OnInit {
     pricingItem = [
         {
             image: `assets/images/pricing/pricing-shape.png`,
-            title: `Basic Plan`,
+            title: `Tratamientos Faciales`,
             featuresList: [
                 {
-                    title: `Body Massage`,
-                    price: `$12`,
+                    title: `Desensibilizante`,
+                    price: `$400`,
                     subtext: `Clean 20-30 Minutes`
                 },
                 {
-                    title: `Facials`,
-                    price: `$20`,
-                    subtext: `Clean 20-30 Minutes`
+                    title: `Despigmentante`,
+                    price: `$500`,
+                    subtext: `Ideal para aclarar la piel`
                 },
                 {
-                    title: `Hands & Feet`,
-                    price: `$24`,
-                    subtext: `Clean 30-40 Minutes`
+                    title: `Control de Acné`,
+                    price: `$500`,
+                    subtext: `Ayuda a controlar el acné`
+                },
+                {
+                    title: `Reafirmacion`,
+                    price: `$500`,
+                    subtext: `Ayuda a reducir las aruugas y los ejectos del envejecimiento`
+                },
+                {
+                    title: `Microdermoabrasión`,
+                    price: `$500`,
+                    subtext: `Tratamiento estetico que mejora el aspecto de nuestra piel`
+                },
+                {
+                    title: `Luz Pulsada`,
+                    price: `$750`,
+                    subtext: `Tratamieno idoneo para tratar difrentes afecciones de la piel`
                 }
             ],
             buttonText: `Booking Now`,
