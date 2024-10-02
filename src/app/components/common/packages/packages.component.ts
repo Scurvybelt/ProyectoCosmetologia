@@ -74,12 +74,17 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Desensibilizante`,
                     price: `$400`,
-                    subtext: `Clean 20-30 Minutes`
+                    subtext: `Ayuda a reforzar las defensas de la piel, consiguiendo disminuir progresivamente la sensibilidad.`
                 },
                 {
                     title: `Despigmentante`,
                     price: `$500`,
-                    subtext: `Ideal para aclarar la piel`
+                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol`
+                },
+                {
+                    title: `Contorno de Ojos`,
+                    price: `$550`,
+                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol`
                 },
                 {
                     title: `Control de Acné`,
@@ -108,22 +113,37 @@ export class PackagesComponent implements OnInit {
         },
         {
             image: `assets/images/pricing/pricing-shape.png`,
-            title: `Standard Plan`,
+            title: `Tratamiento Faciales`,
             featuresList: [
                 {
-                    title: `Massage Therapy`,
-                    price: `$32`,
-                    subtext: `Clean 40-50 Minutes`
+                    title: `Limpieza Facial Profunda`,
+                    price: `$350`,
+                    subtext: `Mejora el aspeco de la piel, corrigue la dilatacion de los poros, elimina las celulas mas superficiales`
                 },
                 {
-                    title: `Waxing`,
-                    price: `$29`,
-                    subtext: `Clean 20-30 Minutes`
+                    title: `Limpieza Facial + Microdermo`,
+                    price: `$500`,
+                    subtext: `Elimina las capas mas superficiales de la piel, idal par amantere la piel joven, suave y limpia.`
                 },
                 {
-                    title: `Rest & Relaxation`,
-                    price: `$42`,
-                    subtext: `Clean 30-35 Minutes`
+                    title: `RadioFrecuencia`,
+                    price: `$550`,
+                    subtext: `Combate de manera efectiva la flacidez y regenera el colágeno para lucir la piel firme y tersa.`
+                },
+                {
+                    title: `Ultrasonido`,
+                    price: `$500`,
+                    subtext: `Ayuda a la prevención de arrugas mediante la regeneración de la elastina, luciendo una piel mas hidratada.`
+                },
+                {
+                    title: `Mascara Led`,
+                    price: `$350`,
+                    subtext: `Rejuvence las células de la piel, aumentando la hidratación de manera inmediata, reduciendo enrojecimiento e inflamación.`
+                },
+                {
+                    title: `Hidratación`,
+                    price: `$350`,
+                    subtext: `Consigue una hidratación extra y el equilibrio de la piel obtenido de forma inmediata un ctis sedoso y luminoso.`
                 }
             ],
             buttonText: `Booking Now`,
@@ -132,22 +152,61 @@ export class PackagesComponent implements OnInit {
         },
         {
             image: `assets/images/pricing/pricing-shape.png`,
-            title: `Premium Plan`,
+            title: `Tratamientos Corporales`,
             featuresList: [
                 {
-                    title: `Full Body Massage`,
-                    price: `$125`,
-                    subtext: `Clean 60-80 Minutes`
+                    title: `Exfoliación`,
+                    price: `$700`,
+                    subtext: `Ayuda a renovar la epidermis y conservarla en buen estado y resplandeciente.`
                 },
                 {
-                    title: `Personalized Massage`,
-                    price: `$150`,
-                    subtext: `Clean 30-40 Minutes`
+                    title: `Baño de Novia`,
+                    price: `$950`,
+                    subtext: `Es el método ideal para eliminar las células muertas, rejuveneciendo la piel, dejándola suave y radiante.`
                 },
                 {
-                    title: `Couple Massage`,
-                    price: `$180`,
-                    subtext: `Clean 20-30 Minutes`
+                    title: `Radiofrecuencia`,
+                    price: `$600`,
+                    subtext: `Ayuda en la formacion de nuevo `
+                },
+                {
+                    title: `Drenaje Linfático`,
+                    price: `$400`,
+                    subtext: `Masaje, suave y ligero, que se aplica sobre el sistema cirulcatorio.`
+                },
+                {
+                    title: `Mesoterapia Virtual`,
+                    price: `$500`,
+                    subtext: `Tratamiento sin agujas y sin dolor para tratar celulitis, flacidez, envejecimeinto cutáneo o estrias.`
+                }
+            ],
+            buttonText: `Booking Now`,
+            buttonIcon: `flaticon-046-calendar`,
+            buttonLink: `/appointment`
+        },
+        {
+            image: `assets/images/pricing/pricing-shape.png`,
+            title: `Tratamientos Corporales`,
+            featuresList: [
+                {
+                    title: `Glúteos`,
+                    price: `$450`,
+                    subtext: `Ayuda a tonificar y reafirmar la zona de los glùteos mediante el uso de aparatología medica y activos especificos.`
+                },
+                {
+                    title: `Reductivo (100 sesiones)`,
+                    price: `$4,000`,
+                    subtext: `Terapia que ayuda a movilizar el tejido adiposo en personas con sobrepeso, y grasas localizadas reduciendo medidas.`
+                },
+                {
+                    title: `Reafirmate (10 sesiones)`,
+                    price: `$4,000`,
+                    subtext: `Tratamiento no invasivo que combina tratamientos con aparatología medica y tratamientos manulaes para acceder de manera profunda, comoda y segura.`
+                },
+                {
+                    title: `Limpieza Profunda de Espalda`,
+                    price: `$450`,
+                    subtext: `Ayuda a la eliminación de las impurezas, barritos y espinillas, utilizando productos con principios activos saponificantes y secantes, finalizando con una mascarilla secante.`
                 }
             ],
             buttonText: `Booking Now`,
