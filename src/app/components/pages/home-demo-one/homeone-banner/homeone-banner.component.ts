@@ -18,9 +18,9 @@ export class HomeoneBannerComponent implements OnInit {
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.`,
             buttonText: `Learn More`,
             buttonLink: `/about`,
-            img1: `assets/images/home-one/woman.png`,
-            img2: `assets/images/home-one/home-vector.png`,
-            img3: `assets/images/home-one/nail-img.jpg`
+            img1: `assets/images/Home-one/woman.png`,
+            img2: `assets/images/Home-one/Home-vector.png`,
+            img3: `assets/images/Home-one/nail-img.jpg`
         }
     ]
 

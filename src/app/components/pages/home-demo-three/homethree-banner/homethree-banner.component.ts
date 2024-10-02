@@ -35,7 +35,7 @@ export class HomethreeBannerComponent implements OnInit {
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo consectetur.`,
             buttonText: `Learn More`,
             buttonLink: `/about`,
-            bgImage: `assets/images/home-three/home-three-img1.jpg`,
+            bgImage: `assets/images/Home-three/Home-three-img1.jpg`,
         },
         {
             subtitle: `Nail & Beauty Salon`,
@@ -43,7 +43,7 @@ export class HomethreeBannerComponent implements OnInit {
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo consectetur.`,
             buttonText: `Learn More`,
             buttonLink: `/about`,
-            bgImage: `assets/images/home-three/home-three-img2.jpg`,
+            bgImage: `assets/images/Home-three/Home-three-img2.jpg`,
         }
     ]
 

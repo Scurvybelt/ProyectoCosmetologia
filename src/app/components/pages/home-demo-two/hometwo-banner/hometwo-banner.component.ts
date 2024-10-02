@@ -18,7 +18,7 @@ export class HometwoBannerComponent implements OnInit {
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec mattis pulvinar dapibus leo consectetur.`,
             buttonText: `Learn More`,
             buttonLink: `/about`,
-            image: `assets/images/home-two/home-two.png`,
+            image: `assets/images/Home-two/Home-two.png`,
         }
     ]
 

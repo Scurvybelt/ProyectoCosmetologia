@@ -13,7 +13,7 @@ export class ServicesPageOneComponent implements OnInit {
 
     pageTitle = [
         {
-            title: `Services Style One`,
+            title: `Servicios`,
             img: `assets/images/inner-banner/inner-banner2.png`
         }
     ]
