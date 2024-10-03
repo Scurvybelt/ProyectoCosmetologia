@@ -15,9 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeDemoOneComponent } from './components/pages/Home-demo-one/Home-demo-one.component';
-import { HomeDemoTwoComponent } from './components/pages/Home-demo-two/Home-demo-two.component';
-import { HomeDemoThreeComponent } from './components/pages/Home-demo-three/Home-demo-three.component';
+import { HomeDemoOneComponent } from './components/pages/home-demo-one/home-demo-one.component';
+import { HomeDemoTwoComponent } from './components/pages/home-demo-two/home-demo-two.component';
+import { HomeDemoThreeComponent } from './components/pages/home-demo-three/home-demo-three.component';
 import { NavbarComponent } from './components/common/navbar/navbar.component';
 import { FooterComponent } from './components/common/footer/footer.component';
 import { NotFoundComponent } from './components/common/not-found/not-found.component';
@@ -32,10 +32,10 @@ import { IntroVideoComponent } from './components/common/intro-video/intro-video
 import { ServicesComponent } from './components/common/services/services.component';
 import { AboutComponent } from './components/common/about/about.component';
 import { FeaturedServicesComponent } from './components/common/featured-services/featured-services.component';
-import { HomeoneBannerComponent } from './components/pages/Home-demo-one/homeone-banner/homeone-banner.component';
+import { HomeoneBannerComponent } from './components/pages/home-demo-one/homeone-banner/homeone-banner.component';
 import { TopHeaderComponent } from './components/common/top-header/top-header.component';
-import { HometwoBannerComponent } from './components/pages/Home-demo-two/hometwo-banner/hometwo-banner.component';
-import { HomethreeBannerComponent } from './components/pages/Home-demo-three/homethree-banner/homethree-banner.component';
+import { HometwoBannerComponent } from './components/pages/home-demo-two/hometwo-banner/hometwo-banner.component';
+import { HomethreeBannerComponent } from './components/pages/home-demo-three/homethree-banner/homethree-banner.component';
 import { BannerFormComponent } from './components/common/banner-form/banner-form.component';
 import { AboutPageComponent } from './components/pages/about-page/about-page.component';
 import { TestimonialsPageComponent } from './components/pages/testimonials-page/testimonials-page.component';

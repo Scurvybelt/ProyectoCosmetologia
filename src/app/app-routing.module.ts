@@ -16,9 +16,9 @@ import { FaqPageComponent } from './components/pages/faq-page/faq-page.component
 import { ForgotPasswordPageComponent } from './components/pages/forgot-password-page/forgot-password-page.component';
 import { GalleryPageOneComponent } from './components/pages/gallery-page-one/gallery-page-one.component';
 import { GalleryPageTwoComponent } from './components/pages/gallery-page-two/gallery-page-two.component';
-import { HomeDemoOneComponent } from './components/pages/Home-demo-one/Home-demo-one.component';
-import { HomeDemoThreeComponent } from './components/pages/Home-demo-three/Home-demo-three.component';
-import { HomeDemoTwoComponent } from './components/pages/Home-demo-two/Home-demo-two.component';
+import { HomeDemoOneComponent } from './components/pages/home-demo-one/home-demo-one.component';
+import { HomeDemoThreeComponent } from './components/pages/home-demo-three/home-demo-three.component';
+import { HomeDemoTwoComponent } from './components/pages/home-demo-two/home-demo-two.component';
 import { PricingPageOneComponent } from './components/pages/pricing-page-one/pricing-page-one.component';
 import { PricingPageTwoComponent } from './components/pages/pricing-page-two/pricing-page-two.component';
 import { PrivacyPolicyPageComponent } from './components/pages/privacy-policy-page/privacy-policy-page.component';
