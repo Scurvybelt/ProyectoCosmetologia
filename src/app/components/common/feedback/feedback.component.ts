@@ -186,7 +186,7 @@ export class FeedbackComponent implements OnInit {
         {
             img: `assets/images/testimonial/cliente4.jpg`,
             name: `Issa A-secas`,
-            designation: `Clienta`,
+            designation: `Cliente`,
             desc: `Super atención, perfecto para consentirte!
 Y todo está muy limpio! Recomendado ampliamente`,
             rating: [
