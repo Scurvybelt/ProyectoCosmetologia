@@ -109,62 +109,16 @@ export class FeedbackComponent implements OnInit {
 
     sectionTitle = [
         {
-            subtitle: `Our Testimonial`,
-            title: `What Our Clients Feedback`
+            subtitle: `Nuestros Testimonios`,
+            title: `Reseñas de Clientes`
         }
     ]
     testimonialCard = [
         {
-            img: `assets/images/testimonial/testimonial-img1.jpg`,
-            name: `Emanuele Ebrew`,
-            designation: `Senior Manager`,
-            desc: `Pellentesque habitant morbi tristique senectus  netus et malesuada fames ac turpis egestas vestibulum tortor quam feugiat vit tristique senectus.`,
-            rating: [
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-half-line`
-                },
-                {
-                    icon: `ri-star-line`
-                }
-            ]
-        },
-        {
-            img: `assets/images/testimonial/testimonial-img2.jpg`,
-            name: `Giovanni Loren`,
-            designation: `Founder`,
-            desc: `Pellentesque habitant morbi tristique senectus  netus et malesuada fames ac turpis egestas vestibulum tortor quam feugiat vit tristique senectus.`,
-            rating: [
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                },
-                {
-                    icon: `ri-star-fill`
-                }
-            ]
-        },
-        {
-            img: `assets/images/testimonial/testimonial-img3.jpg`,
-            name: `Massimo Pasquale`,
-            designation: `Manager`,
-            desc: `Pellentesque habitant morbi tristique senectus  netus et malesuada fames ac turpis egestas vestibulum tortor quam feugiat vit tristique senectus.`,
+            img: `assets/images/testimonial/cliente1.jpg`,
+            name: `Lau Torales Gonzalez`,
+            designation: `Cliente`,
+            desc: `El trato es increible, me encanto todos los tratamientos super recomendados y el microblading lo realiza padrisimo, para esas personas que luego tienen miedo de que no les vayan a realizar un buen trabajo, en aixa Yess es super buena en lo que hace y los resultados padrisimos!!!`,
             rating: [
                 {
                     icon: `ri-star-fill`
@@ -184,10 +138,10 @@ export class FeedbackComponent implements OnInit {
             ]
         },
         {
-            img: `assets/images/testimonial/testimonial-img4.jpg`,
-            name: `Gabriele Edoardo`,
-            designation: `Developer`,
-            desc: `Pellentesque habitant morbi tristique senectus  netus et malesuada fames ac turpis egestas vestibulum tortor quam feugiat vit tristique senectus.`,
+            img: `assets/images/testimonial/cliente2.jpg`,
+            name: `Daniel Ruiz Cordova`,
+            designation: `Cliente`,
+            desc: `Muy buena atención y buenos tratamientos`,
             rating: [
                 {
                     icon: `ri-star-fill`
@@ -199,7 +153,54 @@ export class FeedbackComponent implements OnInit {
                     icon: `ri-star-fill`
                 },
                 {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                }
+            ]
+        },
+        {
+            img: `assets/images/testimonial/cliente3.jpg`,
+            name: `Margaret Ramirez`,
+            designation: `Cliente`,
+            desc: `Excelente trato y super recomendados los tratamientos.`,
+            rating: [
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                },
+                {
                     icon: `ri-star-line`
+                }
+            ]
+        },
+        {
+            img: `assets/images/testimonial/cliente4.jpg`,
+            name: `Issa A-secas`,
+            designation: `Cliente`,
+            desc: `Super atención, perfecto para consentirte!
+Y todo está muy limpio! Recomendado ampliamente`,
+            rating: [
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
+                },
+                {
+                    icon: `ri-star-fill`
                 },
                 {
                     icon: `ri-star-line`

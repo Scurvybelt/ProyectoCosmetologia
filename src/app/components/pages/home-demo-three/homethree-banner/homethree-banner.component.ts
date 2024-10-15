@@ -30,7 +30,7 @@ export class HomethreeBannerComponent implements OnInit {
 
     bannerContent = [
         {
-            subtitle: `Nail & Beauty Salon`,
+            subtitle: `Centro Integral de Bienestar y Belleza`,
             title: `Bringing Out The Beauty in You`,
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo consectetur.`,
             buttonText: `Learn More`,
@@ -38,7 +38,7 @@ export class HomethreeBannerComponent implements OnInit {
             bgImage: `assets/images/home-three/home-three-img1.jpg`,
         },
         {
-            subtitle: `Nail & Beauty Salon`,
+            subtitle: `Centro Integral de Bienestar y Belleza`,
             title: `We’ll Style While You Smile!`,
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo consectetur.`,
             buttonText: `Learn More`,

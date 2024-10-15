@@ -13,7 +13,7 @@ export class HomeoneBannerComponent implements OnInit {
 
     bannerContent = [
         {
-            subtitle: `Nail & Beauty Salon`,
+            subtitle: `Centro Integral de Bienestar y Belleza`,
             title: `We are Experience in Nail Care`,
             paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec ullamcorper mattis pulvinar dapibus leo.`,
             buttonText: `Learn More`,

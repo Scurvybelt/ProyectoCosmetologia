@@ -19,50 +19,50 @@ export class ServicesPageOneComponent implements OnInit {
     ]
     servicesCard = [
         {
-            title: `Glitter For Nail Art`,
+            title: `Tratamientos Corporales`,
             image: `assets/images/services/services-img1.jpg`,
             detailsLink: `/service-details`
         },
         {
-            title: `Classic Nail Pedicure`,
+            title: `Tratamientos Faciales`,
             image: `assets/images/services/services-img2.jpg`,
             detailsLink: `/service-details`
         },
         {
-            title: `Paraffin For Nail Hands`,
+            title: `Depilación Permanente`,
             image: `assets/images/services/services-img3.jpg`,
             detailsLink: `/service-details`
         },
         {
-            title: `Deep Paraffin Waxing`,
+            title: `Masajes`,
             image: `assets/images/services/services-img4.jpg`,
-            detailsLink: `/service-details`
-        },
-        {
-            title: `Classic Nail Manicure`,
-            image: `assets/images/services/services-img5.jpg`,
-            detailsLink: `/service-details`
-        },
-        {
-            title: `Art Nail & Effects`,
-            image: `assets/images/services/services-img6.jpg`,
-            detailsLink: `/service-details`
-        },
-        {
-            title: `Deep Paraffin Waxing`,
-            image: `assets/images/services/services-img4.jpg`,
-            detailsLink: `/service-details`
-        },
-        {
-            title: `Classic Nail Manicure`,
-            image: `assets/images/services/services-img5.jpg`,
-            detailsLink: `/service-details`
-        },
-        {
-            title: `Art Nail & Effects`,
-            image: `assets/images/services/services-img6.jpg`,
             detailsLink: `/service-details`
         }
+        /*{
+            title: `Classic Nail Manicure`,
+            image: `assets/images/services/services-img5.jpg`,
+            detailsLink: `/service-details`
+        },
+        {
+            title: `Art Nail & Effects`,
+            image: `assets/images/services/services-img6.jpg`,
+            detailsLink: `/service-details`
+        },
+        {
+            title: `Deep Paraffin Waxing`,
+            image: `assets/images/services/services-img4.jpg`,
+            detailsLink: `/service-details`
+        },
+        {
+            title: `Classic Nail Manicure`,
+            image: `assets/images/services/services-img5.jpg`,
+            detailsLink: `/service-details`
+        },
+        {
+            title: `Art Nail & Effects`,
+            image: `assets/images/services/services-img6.jpg`,
+            detailsLink: `/service-details`
+        }*/
     ]
 
     currentPage : any;
