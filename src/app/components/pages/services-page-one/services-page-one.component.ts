@@ -20,22 +20,22 @@ export class ServicesPageOneComponent implements OnInit {
     servicesCard = [
         {
             title: `Tratamientos Corporales`,
-            image: `assets/images/services/services-img1.jpg`,
+            image: `assets/images/services/corporal.png`,
             detailsLink: `/service-details`
         },
         {
             title: `Tratamientos Faciales`,
-            image: `assets/images/services/services-img2.jpg`,
+            image: `assets/images/services/faciales.png`,
             detailsLink: `/service-details`
         },
         {
             title: `Depilación Permanente`,
-            image: `assets/images/services/services-img3.jpg`,
+            image: `assets/images/services/depilacion.png`,
             detailsLink: `/service-details`
         },
         {
             title: `Masajes`,
-            image: `assets/images/services/services-img4.jpg`,
+            image: `assets/images/services/masajes.jpg`,
             detailsLink: `/service-details`
         }
         /*{
