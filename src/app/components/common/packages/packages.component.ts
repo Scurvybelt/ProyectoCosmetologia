@@ -17,7 +17,7 @@ export class PackagesComponent implements OnInit {
     sectionTitle = [
         {
             subtitle: `Con los mejores precios`,
-            title: `Nuestros Paquetes`
+            title: `Nuestros Tratamientos`
         }
     ]
     pricingCard = [
@@ -79,32 +79,32 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Despigmentante`,
                     price: `$500`,
-                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol`
+                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol.`
                 },
                 {
                     title: `Contorno de Ojos`,
                     price: `$550`,
-                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol`
+                    subtext: `Ideal para aclarar la piel y eliminar las manchas prvocadas por el sol.`
                 },
                 {
                     title: `Control de Acné`,
                     price: `$500`,
-                    subtext: `Ayuda a controlar el acné`
+                    subtext: `Ayuda a controlar el acné.`
                 },
                 {
-                    title: `Reafirmacion`,
+                    title: `Reafirmación`,
                     price: `$500`,
-                    subtext: `Ayuda a reducir las aruugas y los ejectos del envejecimiento`
+                    subtext: `Ayuda a reducir las arrugas y los ejectos del envejecimiento.`
                 },
                 {
                     title: `Microdermoabrasión`,
                     price: `$500`,
-                    subtext: `Tratamiento estetico que mejora el aspecto de nuestra piel`
+                    subtext: `Tratamiento estético que mejora el aspecto de nuestra piel.`
                 },
                 {
                     title: `Luz Pulsada`,
                     price: `$750`,
-                    subtext: `Tratamieno idoneo para tratar difrentes afecciones de la piel`
+                    subtext: `Tratamiento idóneo para tratar difrentes afecciones de la piel.`
                 }
             ],
             buttonText: `Booking Now`,
@@ -118,12 +118,12 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Limpieza Facial Profunda`,
                     price: `$350`,
-                    subtext: `Mejora el aspeco de la piel, corrigue la dilatacion de los poros, elimina las celulas mas superficiales`
+                    subtext: `Mejora el aspecto de la piel, corrige la dilatación de los poros, elimina las células más superficiales.`
                 },
                 {
                     title: `Limpieza Facial + Microdermo`,
                     price: `$500`,
-                    subtext: `Elimina las capas mas superficiales de la piel, idal par amantere la piel joven, suave y limpia.`
+                    subtext: `Elimina las capas mas superficiales de la piel, ideal para mantener la piel joven, suave y limpia.`
                 },
                 {
                     title: `RadioFrecuencia`,
@@ -133,17 +133,17 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Ultrasonido`,
                     price: `$500`,
-                    subtext: `Ayuda a la prevención de arrugas mediante la regeneración de la elastina, luciendo una piel mas hidratada.`
+                    subtext: `Ayuda a la prevención de arrugas mediante la regeneración de la elastina, luciendo una piel más hidratada.`
                 },
                 {
-                    title: `Mascara Led`,
+                    title: `Máscara Led`,
                     price: `$350`,
                     subtext: `Rejuvence las células de la piel, aumentando la hidratación de manera inmediata, reduciendo enrojecimiento e inflamación.`
                 },
                 {
                     title: `Hidratación`,
                     price: `$350`,
-                    subtext: `Consigue una hidratación extra y el equilibrio de la piel obtenido de forma inmediata un ctis sedoso y luminoso.`
+                    subtext: `Consigue una hidratación extra y el equilibrio de la piel obtenido de forma inmediata un cutis sedoso y luminoso.`
                 }
             ],
             buttonText: `Booking Now`,
@@ -162,22 +162,22 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Baño de Novia`,
                     price: `$950`,
-                    subtext: `Es el método ideal para eliminar las células muertas, rejuveneciendo la piel, dejándola suave y radiante.`
+                    subtext: `Método ideal para eliminar las células muertas, rejuveneciendo la piel, dejándola suave y radiante.`
                 },
                 {
                     title: `Radiofrecuencia`,
                     price: `$600`,
-                    subtext: `Ayuda en la formacion de nuevo `
+                    subtext: `Ayuda en la formación de nuevo FALTA TEXTO `
                 },
                 {
                     title: `Drenaje Linfático`,
                     price: `$400`,
-                    subtext: `Masaje, suave y ligero, que se aplica sobre el sistema cirulcatorio.`
+                    subtext: `Masaje, suave y ligero, que se aplica sobre el sistema circulatorio.`
                 },
                 {
                     title: `Mesoterapia Virtual`,
                     price: `$500`,
-                    subtext: `Tratamiento sin agujas y sin dolor para tratar celulitis, flacidez, envejecimeinto cutáneo o estrias.`
+                    subtext: `Tratamiento sin agujas y sin dolor para tratar celulitis, flacidez, envejecimeinto cutáneo o estrías.`
                 }
             ],
             buttonText: `Booking Now`,
@@ -191,7 +191,7 @@ export class PackagesComponent implements OnInit {
                 {
                     title: `Glúteos`,
                     price: `$450`,
-                    subtext: `Ayuda a tonificar y reafirmar la zona de los glùteos mediante el uso de aparatología medica y activos especificos.`
+                    subtext: `Ayuda a tonificar y reafirmar la zona de los glúteos mediante el uso de aparatología medica y activos específicos.`
                 },
                 {
                     title: `Reductivo (100 sesiones)`,
@@ -199,9 +199,9 @@ export class PackagesComponent implements OnInit {
                     subtext: `Terapia que ayuda a movilizar el tejido adiposo en personas con sobrepeso, y grasas localizadas reduciendo medidas.`
                 },
                 {
-                    title: `Reafirmate (10 sesiones)`,
+                    title: `Reafírmate (10 sesiones)`,
                     price: `$4,000`,
-                    subtext: `Tratamiento no invasivo que combina tratamientos con aparatología medica y tratamientos manulaes para acceder de manera profunda, comoda y segura.`
+                    subtext: `Tratamiento no invasivo que combina tratamientos con aparatología medica y tratamientos manulaes para acceder de manera profunda, cómoda y segura.`
                 },
                 {
                     title: `Limpieza Profunda de Espalda`,

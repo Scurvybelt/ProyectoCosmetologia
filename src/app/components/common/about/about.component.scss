@@ -114,12 +114,14 @@
         z-index: -1;
         position: absolute;
         animation: moveleftbounce 7s linear infinite;
+        filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
     }
     .shape2 {
         animation: moveleftbounce 7s linear infinite;
         position: absolute;
         bottom: 0;
         right: 0;
+        filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
     }
 }
 .about-img-three {
@@ -139,6 +141,7 @@
             border-radius: 50%;
             border: 5px solid var(--whiteColor);
             animation: movebounce 9s linear infinite;
+            filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
         }
     }
     .content {

@@ -1,5 +1,5 @@
 .banner-area {
-    background-color: #efcec9;
+    background-color: #00a2a228;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -43,8 +43,10 @@
             left: -50px;
 
             img {
+                
                 max-width: 415px;
                 animation: moveleftbounce 9s linear infinite;
+                filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
             }
         }
         .vector2 {
@@ -56,6 +58,7 @@
             img {
                 max-width: 215px;
                 animation: movebounce 9s linear infinite;
+                filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
             }
         }
     }
@@ -68,6 +71,7 @@
 
     img {
         animation: movebounce 5s linear infinite;
+        filter: sepia(1) hue-rotate(180deg) saturate(5) brightness(0.5);
     }
 }
 

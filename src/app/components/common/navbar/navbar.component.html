@@ -3,7 +3,7 @@
     class="navbar-area"
     [ngClass]="{'navbar-style-two': router.url === '/index-2' || router.url === '/index-3', 'sticky': isSticky}"
 >
-    <div class="container-fluid">
+    <div class="container-fluid" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);">
         <nav class="navbar navbar-expand-lg navbar-light bg-light" [class.active]="classApplied">
             <a class="navbar-brand" routerLink="/index-2">
                 <img src="assets/images/gallery/aisaLogo.png" alt="logo">
