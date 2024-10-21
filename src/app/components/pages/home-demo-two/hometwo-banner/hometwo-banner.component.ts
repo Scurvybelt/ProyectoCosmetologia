@@ -14,9 +14,9 @@ export class HometwoBannerComponent implements OnInit {
     bannerContent = [
         {
             subtitle: `Centro Integral de Bienestar y Belleza`,
-            title: `A Wonderful Place to Be Wonderful`,
-            paragraph: `Lorem ipsum dolor sit amet consectetur adipiscing elit Ut elit tellus luctus nec mattis pulvinar dapibus leo consectetur.`,
-            buttonText: `Learn More`,
+            title: `Más que belleza, una experiencia integral`,
+            paragraph: `En Aixa Centro Integral de Bienestar y Belleza, creemos que cada persona es una obra de arte única esperando ser realzada.`,
+            buttonText: `Leer Más`,
             buttonLink: `/about`,
             image: `assets/images/home-two/home-two.png`,
         }

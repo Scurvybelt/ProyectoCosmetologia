@@ -48,8 +48,8 @@ export class ServicesComponent implements OnInit {
 
     sectionTitle = [
         {
-            subtitle: `Our Services`,
-            title: `What We Offer`
+            subtitle: `Nuestros Servicios`,
+            title: `¿Qué Ofrecemos?`
         }
     ]
     servicesCard = [
@@ -86,27 +86,27 @@ export class ServicesComponent implements OnInit {
     ]
     servicesItem = [
         {
-            title: `Executive Reflexology`,
+            title: `Tratamientos Faciales`,
             icon: `flaticon-066-relax`,
-            image: `assets/images/services/services-img7.jpg`,
+            image: `assets/images/services/faciales.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Facial & Therapy`,
+            title: `Depilación Permanente`,
             icon: `flaticon-067-cosmetics`,
-            image: `assets/images/services/services-img8.jpg`,
+            image: `assets/images/services/depilacion.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Swedish Massage`,
+            title: `Tratamientos Corporales`,
             icon: `flaticon-068-make-up`,
-            image: `assets/images/services/services-img9.jpg`,
+            image: `assets/images/services/corporal.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Nail Therapy`,
+            title: `Masajes`,
             icon: `flaticon-069-make-up-1`,
-            image: `assets/images/services/services-img10.jpg`,
+            image: `assets/images/services/masajes.jpg`,
             detailsLink: `/service-details`
         }
     ]

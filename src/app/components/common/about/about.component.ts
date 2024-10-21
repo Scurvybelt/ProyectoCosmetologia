@@ -33,12 +33,12 @@ export class AboutComponent implements OnInit {
 
     aboutContent = [
         {
-            subtitle: `About Us`,
+            subtitle: `Sobre nosotros...`,
             title: `Moisturize Your Hands Everyday`,
-            title2: `An Experiences SPA Care For Your Beauty`,
+            title2: `Una Experiencia Única para tu Belleza Interior`,
             title3: `We Increase Your Beauty Salon & Spa`,
-            desc1: `Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled but also the leap into electronic typesetting.`,
-            desc2: `Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type.`,
+            desc1: `En Aixa Centro Integral de Bienestar y Belleza, nos dedicamos a realzar tu belleza natural a través de tratamientos cosmetológicos innovadores y personalizados. Nuestro equipo de profesionales expertos combina técnicas avanzadas con un servicio cálido y acogedor.`,
+            desc2: `Creamos un espacio donde el bienestar y la belleza se fusionan para brindarte una experiencia única. Nos enorgullece acompañarte en tu viaje hacia la mejor versión de ti misma, cuidando cada detalle para que te sientas renovada y radiante.`,
             link: `/about`,
             image: [
                 {
