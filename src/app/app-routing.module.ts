@@ -36,7 +36,7 @@ import { TrackingOrderPageComponent } from './components/pages/tracking-order-pa
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
 
 const routes: Routes = [
-    {path: '', component: HomeDemoTwoComponent},
+    {path: '', redirectTo: 'index-2', pathMatch: 'full'},
     {path: 'index-2', component: HomeDemoTwoComponent},
     {path: 'index-3', component: HomeDemoThreeComponent},
     {path: 'about', component: AboutPageComponent},

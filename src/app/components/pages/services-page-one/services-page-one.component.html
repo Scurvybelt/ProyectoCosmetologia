@@ -34,8 +34,9 @@
                 *ngFor="let content of servicesCard | paginate: { itemsPerPage: 6, currentPage }"
             >
                 <div class="services-card">
+                    
                     <a routerLink="{{content.detailsLink}}" class="d-block img">
-                        <img [src]="content.image" alt="services-image" />
+                        <img [src]="content.image" alt="services-image" (click)="onServiceClick(content.title)"/>
                     </a>
                     <div class="content">
                         <h3><a routerLink="{{content.detailsLink}}">
