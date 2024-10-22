@@ -19,17 +19,17 @@ export class ServicesPageOneComponent implements OnInit {
     ]
     servicesCard = [
         {
-            title: `Tratamientos Corporales`,
+            title: `Corporales`,
             image: `assets/images/services/corporal.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Tratamientos Faciales`,
+            title: `Faciales`,
             image: `assets/images/services/faciales.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Depilación Permanente`,
+            title: `Depilación`,
             image: `assets/images/services/depilacion.png`,
             detailsLink: `/service-details`
         },
@@ -71,4 +71,8 @@ export class ServicesPageOneComponent implements OnInit {
         window.scrollTo(0, 0);
     }
 
+    onServiceClick(content: string) {
+        console.log(content);
+        // Realiza la consulta aquí
+      }
 }

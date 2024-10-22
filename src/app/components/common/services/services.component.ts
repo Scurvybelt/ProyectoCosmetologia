@@ -54,17 +54,17 @@ export class ServicesComponent implements OnInit {
     ]
     servicesCard = [
         {
-            title: `Tratamientos Corporales`,
+            title: `Corporales`,
             image: `assets/images/services/services-img1.jpg`,
             detailsLink: `/service-details`
         },
         {
-            title: `Tratamientos Faciales`,
+            title: `Faciales`,
             image: `assets/images/services/services-img2.jpg`,
             detailsLink: `/service-details`
         },
         {
-            title: `Depilación Permanente`,
+            title: `Depilación`,
             image: `assets/images/services/services-img3.jpg`,
             detailsLink: `/service-details`
         },
@@ -86,19 +86,19 @@ export class ServicesComponent implements OnInit {
     ]
     servicesItem = [
         {
-            title: `Tratamientos Faciales`,
+            title: `Faciales`,
             icon: `flaticon-066-relax`,
             image: `assets/images/services/faciales.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Depilación Permanente`,
+            title: `Depilación`,
             icon: `flaticon-067-cosmetics`,
             image: `assets/images/services/depilacion.png`,
             detailsLink: `/service-details`
         },
         {
-            title: `Tratamientos Corporales`,
+            title: `Corporales`,
             icon: `flaticon-068-make-up`,
             image: `assets/images/services/corporal.png`,
             detailsLink: `/service-details`
