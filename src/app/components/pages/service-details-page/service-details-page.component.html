@@ -28,40 +28,10 @@
         <div class="row">
             <div class="col-lg-4 col-md-12">
                 <div class="sidebar-area">
-                    <ul class="services-catagory">
+                    <ul *ngFor="let producto of datosProducto" class="services-catagory" >
                         <li>
                             <a routerLink="/service-details">
-                                PVMEPMVOPEMMVPE
-                                <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">
-                                Paraffin For Nail Hands
-                                <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">
-                                Deep Paraffin Waxing
-                                <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">
-                                Art Nail & Effects
-                                <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">
-                                Glitter For Nail Art
-                                <i class="ri-arrow-right-s-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a routerLink="/service-details">
-                                Classic Nail Manicure
+                                {{producto.name}}
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </li>
