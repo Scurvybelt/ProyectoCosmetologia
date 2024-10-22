@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiLocal: 'http://localhost/apiAixa/servicesController.php'
+  apiLocal: 'http://localhost/ApiCosmetologiaAixa/servicesController.php'
 };
 
 /*
