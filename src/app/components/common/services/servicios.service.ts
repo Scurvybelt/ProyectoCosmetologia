@@ -19,6 +19,10 @@ export class ServiciosService {
     return this.http.get(`${BASE_URL}?id=${id}`);
   }
 
+  getProductoByCategory(category: string){
+    return this.http.get(`${BASE_URL}?category=${category}`);
+  }
+
   setServicio(data: any){
     return this.http.post(`${BASE_URL}`, data);
   }
