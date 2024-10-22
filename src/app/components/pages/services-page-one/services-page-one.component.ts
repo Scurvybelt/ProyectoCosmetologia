@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiciosService } from '../../common/services/servicios.service';
 
 @Component({
     selector: 'app-services-page-one',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesPageOneComponent implements OnInit {
 
-    constructor() { }
+    constructor(private servicios: ServiciosService) { }
 
-    ngOnInit(): void {}
+    ngOnInit(): void {
+        this.servicios.getServicios().subscribe((data: any) => {
+          console.log(data);
+        })
+    }
 
     pageTitle = [
         {
