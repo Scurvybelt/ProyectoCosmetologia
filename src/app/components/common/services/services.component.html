@@ -19,7 +19,7 @@
                 class="col-xl-4 col-lg-6 col-sm-6"
                 *ngFor="let content of servicesCard"
             >
-                <div class="services-card">
+                <div [routerLink]="['/service-details/',content.title]" class="services-card">
                     <a routerLink="{{content.detailsLink}}" class="d-block img">
                         <img [src]="content.image" alt="services-image" />
                     </a>
@@ -69,16 +69,16 @@
                 >
                     <div class="services-item">
                         <div class="services-img">
-                            <a routerLink="{{content.detailsLink}}" class="d-block">
+                            <a [routerLink]="['/service-details/',content.title]" class="d-block">
                                 <img [src]="content.image" alt="services-image" />
                             </a>
                             <div class="top-icon"><i class="{{content.icon}}"></i></div>
                         </div>
                         <div class="content">
-                            <h3><a routerLink="{{content.detailsLink}}">
+                            <h3><a [routerLink]="['/service-details/',content.title]">
                                 {{content.title}}
                             </a></h3>
-                            <a routerLink="{{content.detailsLink}}" class="default-btn with-icon">
+                            <a [routerLink]="['/service-details/',content.title]" class="default-btn with-icon">
                                 Información
                                 <i class="flaticon-040-right-arrow"></i>
                             </a>

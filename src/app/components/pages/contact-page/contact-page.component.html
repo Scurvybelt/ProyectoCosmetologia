@@ -66,39 +66,39 @@
             <h2>¿Tienes dudas? ¡Escríbenos!</h2>
         </div>
         <div class="contact-form">
-            <form>
+            <form [formGroup]="formCorreo" (ngSubmit)="mandarFomrulario()">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group" >
-                            <input type="text" class="form-control" placeholder="Nombre" style="background-color: #00a2a228;">
+                            <input type="text" formControlName="name" class="form-control" placeholder="Nombre" style="background-color: #00a2a228;">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Correo" style="background-color: #00a2a228;">
+                            <input type="email" formControlName="email" class="form-control" placeholder="Correo" style="background-color: #00a2a228;">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Celular" style="background-color: #00a2a228;">
+                            <input type="text" formControlName="tel" class="form-control" placeholder="Celular" style="background-color: #00a2a228;">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Asunto" style="background-color: #00a2a228;">
+                            <input type="text" formControlName="asunto" class="form-control" placeholder="Asunto" style="background-color: #00a2a228;">
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
-                            <textarea class="form-control" cols="30" rows="7" placeholder="Escríbe tu duda o comentario" style="background-color: #00a2a228;"></textarea>
+                            <textarea formControlName="message"  class="form-control" cols="30" rows="7" placeholder="Escríbe tu duda o comentario" style="background-color: #00a2a228;"></textarea>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12">
+                    <!-- <div class="col-lg-12 col-md-12">
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="me">
                             <label class="form-check-label" for="me">Acepto Terminos & Condiciones Y <a routerLink="/privacy-policy">Política de Privacidad.</a></label>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-12 col-md-12">
                         <button type="submit" class="default-btn">Enviar</button>
                     </div>
@@ -107,3 +107,16 @@
         </div>
     </div>
 </div>
+
+<section>
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+            <div class="col-lg-12">
+                <div class="map">
+                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3024.4645962375394!2d-74.01354043428768!3d40.7077878458095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSoHo%2094%20Broadway%20St%20New%20York%2C%20NY%201001!5e0!3m2!1sen!2sin!4v1669110084163!5m2!1sen!2sin" class="w-100" height="400" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.6523242042663!2d-96.13022034410754!3d19.16669032053871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3413867907381%3A0x9a90e61920a8a05c!2sC.%20Isabel%20La%20Cat%C3%B3lica%201251a%2C%20Reforma%2C%2091919%20Veracruz%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1729721732180!5m2!1ses-419!2smx" class="w-100" height="400" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
