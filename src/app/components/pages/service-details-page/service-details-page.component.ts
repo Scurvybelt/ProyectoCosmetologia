@@ -10,6 +10,7 @@ import { ServiciosService } from '../../common/services/servicios.service';
 export class ServiceDetailsPageComponent implements OnInit {
   categoria: any;
   datosProducto: any;
+  producto: any;
 
   constructor(private route: ActivatedRoute,private servicios: ServiciosService) { }
 
@@ -20,7 +21,6 @@ export class ServiceDetailsPageComponent implements OnInit {
     this.servicios.getProductoByCategory(this.categoria).subscribe((data: any) => {
       console.log(data);
       this.datosProducto = data;
-  });
+    });
   }
-
 }
