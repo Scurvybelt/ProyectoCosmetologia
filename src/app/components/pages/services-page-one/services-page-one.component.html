@@ -10,7 +10,7 @@
                     <h2>{{title.title}}</h2>
                     <ul>
                         <li>
-                            <a routerLink="/">home</a>
+                            <a routerLink="/">Inicio</a>
                         </li>
                         <li>{{title.title}}</li>
                     </ul>
@@ -36,7 +36,7 @@
                 <div class="services-card">
                     
                     <a [routerLink]="['/service-details',content.title]" class="d-block img">
-                        <img [src]="content.image" alt="services-image" (click)="onServiceClick(content.title)"/>
+                        <img [src]="content.image" alt="services-image">
                     </a>
                     <div class="content">
                         <h3><a [routerLink]="['/service-details',content.title]">

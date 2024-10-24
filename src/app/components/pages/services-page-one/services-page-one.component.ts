@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiciosService } from '../../common/services/servicios.service';
 
 @Component({
     selector: 'app-services-page-one',
@@ -9,25 +8,9 @@ import { ServiciosService } from '../../common/services/servicios.service';
 export class ServicesPageOneComponent implements OnInit {
     selectedContent: string | null = null;
 
-    constructor(private servicios: ServiciosService) { }
+    constructor() { }
 
     ngOnInit(): void {
-        this.servicios.getServicios().subscribe((data: any) => {
-            console.log(data);
-        })
-
-        if (this.selectedContent) {
-            this.servicios.getProductoByCategory(this.selectedContent).subscribe((data: any) => {
-                console.log(data);
-            });
-        }
-    }
-
-    onServiceClick(content: string) {
-        this.selectedContent = content;
-        this.servicios.getProductoByCategory(this.selectedContent).subscribe((data: any) => {
-            console.log(data);
-          });
     }
 
     pageTitle = [

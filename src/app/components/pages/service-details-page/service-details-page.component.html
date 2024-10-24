@@ -7,9 +7,10 @@
                     <h2>Service Details</h2>
                     <ul>
                         <li>
-                            <a routerLink="/">home</a>
+                            <a routerLink="/">Inicio</a>
                         </li>
-                        <li>Service Details</li>
+                        <li>Servicios</li>
+                        <li>{{categoria}}</li>
                     </ul>
                 </div>
             </div>
@@ -30,27 +31,27 @@
                 <div class="sidebar-area">
                     <ul *ngFor="let producto of datosProducto" class="services-catagory" >
                         <li>
-                            <a routerLink="/service-details">
+                            <a routerLink="/service-details/{{categoria}}/{{producto.name}}">
                                 {{producto.name}}
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </li>
                     </ul>
                     <div class="sidebar-widget">
-                        <h3>Our Brochure</h3>
-                        <p>Alienum phaedrum torquatos nec eu vis detra peri culis ex nihil is in mei. Mei an pericula hincar tem ei est Alienum phae</p>
+                        <h3>{{categoria}}</h3>
+                        <p>Visualiza nuestros Servicios {{categoria}} con su descripción y <span style="font-weight: bold;">precio</span>.</p>
                         <button class="default-btn" type="button">
-                            Download PDF Now!
+                            ¡Descarga el PDF!
                         </button>
                     </div>
                 </div>
             </div>
             <div class="col-lg-8 col-md-12">
                 <div class="service-details-content">
-                    <div class="service-preview-img">
+                    <!--<div class="service-preview-img">
                         <img src="assets/images/services/services-details.jpg" alt="service-details" />
-                    </div>
-                    <h3>Happy Hands Nail Polish And Exclusive Collection</h3>
+                    </div>-->
+                    <h3>{{ categoria?.name }}</h3>
                     <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
                     <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi </p>
                     <div class="row">
