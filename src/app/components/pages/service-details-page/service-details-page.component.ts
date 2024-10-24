@@ -29,10 +29,6 @@ export class ServiceDetailsPageComponent implements OnInit {
       console.log(data);
       this.datosProducto = data;
     });
-
-    this.servicios.getServiceByNameAndCategory(this.tratamiento, this.categoria).subscribe(data => {
-      this.description = data;
-    });
   }
 
   getServiceDetails(name: string, category: string): void {
