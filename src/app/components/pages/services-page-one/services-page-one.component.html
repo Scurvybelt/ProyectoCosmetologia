@@ -35,14 +35,14 @@
             >
                 <div class="services-card">
                     
-                    <a [routerLink]="['/service-details',content.title, content.mainService]" class="d-block img">
+                    <a [routerLink]="['/service-details',content.title]" class="d-block img">
                         <img [src]="content.image" alt="services-image">
                     </a>
                     <div class="content">
-                        <h3><a [routerLink]="['/service-details',content.title,content.mainService]">
+                        <h3><a [routerLink]="['/service-details',content.title]">
                             {{content.title}}
                         </a></h3>
-                        <a [routerLink]="['/service-details',content.title, content.mainService]" class="more-btn">
+                        <a [routerLink]="['/service-details',content.title]" class="more-btn">
                             <i class="flaticon-040-right-arrow"></i>
                         </a>
                     </div>

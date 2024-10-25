@@ -32,7 +32,7 @@
                 <div class="sidebar-area">
                     <ul *ngFor="let producto of datosProducto" class="services-catagory" >
                         <li>
-                            <a routerLink="/service-details/{{categoria}}/{{producto.name}}">
+                            <a  (click)="filtrarCategoria(producto.id)">
                                 {{producto.name}}
                                 <i class="ri-arrow-right-s-line"></i>
                             </a>
@@ -52,9 +52,14 @@
                     <!--<div class="service-preview-img">
                         <img src="assets/images/services/services-details.jpg" alt="service-details" />
                     </div>-->
-                    <h1 style="text-align: center;">{{tratamiento}}</h1>
-                    <p style="text-align: center;">{{description}}</p>
-                    <p style="text-align: right; font-size: 2.5rem;">${{price}}</p>
+                    <ng-container *ngIf="tratamiento; else noService">
+                        <h1 style="text-align: center;">{{tratamiento}}</h1>
+                        <p style="text-align: center;">{{description}}</p>
+                        <p style="text-align: right; font-size: 2.5rem;">${{price}}</p>
+                    </ng-container>
+                    <ng-template #noService>
+                        <p style="text-align: center;">Para ver los detalles, <span style="font-weight: bold;">seleccione un servicio.</span></p>
+                    </ng-template>
                     <!--div class="row">
                         <div class="col-6">
                             <div class="service-preview-img">
