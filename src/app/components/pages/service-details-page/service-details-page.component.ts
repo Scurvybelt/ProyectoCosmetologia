@@ -11,7 +11,10 @@ export class ServiceDetailsPageComponent implements OnInit {
   tratamiento: any;
   id: any;
   description: any;
+  img1: any;
+  img2: any;
   price: any;
+  information: any;
   categoria: any;
   datosProducto: any;
   producto: any;
@@ -38,6 +41,9 @@ export class ServiceDetailsPageComponent implements OnInit {
         this.tratamiento = this.id.name;
         this.description = this.id.description;
         this.price = this.id.price;
+        this.information = this.id.information;
+        this.img1 = this.id.img1;
+        this.img2 = this.id.img2;
       }
     });
   }

@@ -55,23 +55,24 @@
                     <ng-container *ngIf="tratamiento; else noService">
                         <h1 style="text-align: center;">{{tratamiento}}</h1>
                         <p style="text-align: center;">{{description}}</p>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="service-preview-img">
+                                    <img src="assets/images/services/{{img1}}" alt="550x410" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="service-preview-img">
+                                    <img src="assets/images/services/{{img2}}" alt="550x410" />
+                                </div>
+                            </div>
+                        </div>
+                        <p style="margin: 2rem;">{{information}}</p>
                         <p style="text-align: right; font-size: 2.5rem;">${{price}}</p>
                     </ng-container>
                     <ng-template #noService>
                         <p style="text-align: center;">Para ver los detalles, <span style="font-weight: bold;">seleccione un servicio.</span></p>
                     </ng-template>
-                    <!--div class="row">
-                        <div class="col-6">
-                            <div class="service-preview-img">
-                                <img src="assets/images/services/services-img10.jpg" alt="service-details" />
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="service-preview-img">
-                                <img src="assets/images/services/services-img15.jpg" alt="service-details" />
-                            </div>
-                        </div>
-                    </div>-->
                     <!--<h3>Sobre este servicio</h3>-->
                     <!--<p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,</p>
                     <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi </p>-->
