@@ -48,7 +48,7 @@ export class ServicesComponent implements OnInit {
 
     sectionTitle = [
         {
-            subtitle: `Nuestros Servicios`,
+            subtitle: `Nuestros Categorías`,
             title: `¿Qué Ofrecemos?`
         }
     ]

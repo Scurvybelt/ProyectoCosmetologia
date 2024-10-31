@@ -28,13 +28,13 @@
 <!-- Services -->
 <div class="services-area ptb-100">
     <div class="container">
+        <p style="text-align: center;">Selecciona una <span style="font-weight: bold;">categoría</span> para visualizar sus servicios y tratamientos.</p>
         <div class="row">
             <div
-                class="col-xl-4 col-lg-6 col-sm-6"
-                *ngFor="let content of servicesCard | paginate: { itemsPerPage: 6, currentPage }"
+                class="col-lg-3 col-md-4 mb-4"
+                *ngFor="let content of servicesCard | slice:0:4"
             >
                 <div class="services-card">
-                    
                     <a [routerLink]="['/service-details',content.title]" class="d-block img">
                         <img [src]="content.image" alt="services-image">
                     </a>

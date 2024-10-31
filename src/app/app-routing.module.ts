@@ -47,6 +47,7 @@ const routes: Routes = [
     {path: 'services-2', component: ServicesPageTwoComponent},
     {path: 'service-details', component: ServiceDetailsPageComponent},
     {path: 'service-details/:categoria', component: ServiceDetailsPageComponent},
+    /*{path: 'service-details/:categoria/:tratamiento', component: ServiceDetailsPageComponent},*/
     {path: 'team', component: TeamPageComponent},
     {path: 'team-details', component: TeamDetailsPageComponent},
     {path: 'pricing', component: PricingPageOneComponent},
