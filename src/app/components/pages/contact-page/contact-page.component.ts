@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EmailService } from '../../common/services/email.service';
 
 @Component({
   selector: 'app-contact-page',
@@ -9,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactPageComponent implements OnInit {
   formCorreo: FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder,private serviceMail: EmailService) { 
     this.formCorreo = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
@@ -25,6 +26,9 @@ export class ContactPageComponent implements OnInit {
 
   mandarFomrulario(){
     console.log(this.formCorreo.value);
+    this.serviceMail.sendEmail(this.formCorreo.value).subscribe((res) => {
+      console.log(res);
+    })
     
   }
 
