@@ -141,7 +141,7 @@ import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist
         NgxPaginationModule,
         HttpClientModule,
         NotifierModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

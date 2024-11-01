@@ -69,38 +69,54 @@
             <form [formGroup]="formCorreo" (ngSubmit)="mandarFomrulario()">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <div class="form-group" >
+                        <div class="form-group">
                             <input type="text" formControlName="name" class="form-control" placeholder="Nombre" style="background-color: #00a2a228;">
+                            <div *ngIf="formCorreo.get('name')?.invalid && formCorreo.get('name')?.touched" class="text-danger">
+                                Nombre es requerido.
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <input type="email" formControlName="email" class="form-control" placeholder="Correo" style="background-color: #00a2a228;">
+                            <div *ngIf="formCorreo.get('email')?.invalid && formCorreo.get('email')?.touched" class="text-danger">
+                                Correo es requerido y debe ser un correo válido.
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <input type="text" formControlName="tel" class="form-control" placeholder="Celular" style="background-color: #00a2a228;">
+                            <div *ngIf="formCorreo.get('tel')?.invalid && formCorreo.get('tel')?.touched" class="text-danger">
+                                Celular es requerido.
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <div class="form-group">
                             <input type="text" formControlName="asunto" class="form-control" placeholder="Asunto" style="background-color: #00a2a228;">
+                            <div *ngIf="formCorreo.get('asunto')?.invalid && formCorreo.get('asunto')?.touched" class="text-danger">
+                                Asunto es requerido.
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12">
                         <div class="form-group">
-                            <textarea formControlName="message"  class="form-control" cols="30" rows="7" placeholder="Escríbe tu duda o comentario" style="background-color: #00a2a228;"></textarea>
+                            <textarea formControlName="message" class="form-control" cols="30" rows="7" placeholder="Escríbe tu duda o comentario" style="background-color: #00a2a228;"></textarea>
+                            <div *ngIf="formCorreo.get('message')?.invalid && formCorreo.get('message')?.touched" class="text-danger">
+                                Mensaje es requerido.
+                            </div>
                         </div>
                     </div>
-                    <!-- <div class="col-lg-12 col-md-12">
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="me">
-                            <label class="form-check-label" for="me">Acepto Terminos & Condiciones Y <a routerLink="/privacy-policy">Política de Privacidad.</a></label>
-                        </div>
-                    </div> -->
                     <div class="col-lg-12 col-md-12">
-                        <button [disabled]="formCorreo.invalid" type="submit" class="default-btn">Enviar</button>
+                        <div class="d-flex align-items-center">
+                            <button  type="submit" class="default-btn d-flex align-items-center">
+                                Enviar
+                                <div *ngIf="EnviarCorreo" class="spinner-border spinner-border-sm ms-2" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </form>

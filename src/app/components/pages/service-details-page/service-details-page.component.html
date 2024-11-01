@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-12">
                 <div class="sidebar-area">
-                    <ul *ngFor="let producto of datosProducto" class="services-catagory" >
+                    <ul *ngFor="let producto of datosProducto" class="services-catagory" style="cursor: pointer;" >
                         <li>
                             <a  (click)="filtrarCategoria(producto.id)">
                                 {{producto.name}}
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <p style="margin: 2rem;">{{information}}</p>
-                        <p style="text-align: right; font-size: 2.5rem;">${{price}}</p>
+                        <p style="text-align: right; font-size: 2.5rem;">{{price | currency:'MXN' }}</p>
                     </ng-container>
                     <ng-template #noService>
                         <p style="text-align: center;">Para ver los detalles, <span style="font-weight: bold;">seleccione un servicio.</span></p>
