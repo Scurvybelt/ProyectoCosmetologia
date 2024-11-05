@@ -13,11 +13,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-4">
+            <!-- <div class="col-lg-5 col-md-4">
                 <div class="inner-img">
                     <img src="assets/images/inner-banner/inner-banner11.png" alt="inner-banner" />
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -29,14 +29,20 @@
             <div class="col-lg-6 col-md-12">
                 <div class="login-form">
                     <h2>Inicia Sesión</h2>
-                    <form>
+                    <form [formGroup]="formLogin" (ngSubmit)="mandarFormulario()">
                         <div class="form-group">
                             <label>Usuario</label>
-                            <input type="text" class="form-control" placeholder="Username or email">
+                            <input type="text" formControlName="userName" class="form-control" placeholder="Ingresa tu usuario">
+                            <div *ngIf="formLogin.get('userName')?.invalid && formLogin.get('userName')?.touched" class="text-danger">
+                                Usuario es requerido
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Contraseña</label>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input type="password" formControlName="password" class="form-control" placeholder="contraseña">
+                            <div *ngIf="formLogin.get('password')?.invalid && formLogin.get('password')?.touched" class="text-danger">
+                                Contraseña es requerida
+                            </div>
                         </div>
                         <div class="row align-items-center">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-6 remember-me-wrap">
