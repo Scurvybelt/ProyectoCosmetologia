@@ -15,6 +15,8 @@
                     <span class="bottom-bar"></span>
                 </span>
             </button>
+            
+
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -484,6 +486,7 @@
                         </a>
                     </li>
                 </ul>
+                
                 <div class="others-option d-flex align-items-center">
                     <!--<div class="option-item">
                         <div class="search-btn" (click)="searchToggleClass()">
@@ -495,12 +498,15 @@
                             <i class="flaticon-034-shopping-cart"></i><span>{{cartProducts.length}}</span>
                         </a>
                     </div> -->
-                    <div class="option-item">
-                        <span class="burger-menu" (click)="switcherToggleClass()">
-                            <span class="top-bar"></span>
-                            <span class="middle-bar"></span>
-                            <span class="bottom-bar"></span>
-                        </span>
+                    
+                    <div class="option-item dropdown" style="cursor: pointer;">
+                        <a class=" nav-link" routerLink="/admin" id="userMenuButton" aria-expanded="false"><!--dropdown-toggle-->
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <!-- <ul *ngIf="isUserMenuVisible" >
+                            <li><a  >Administrador</a></li>
+                            
+                        </ul> -->
                     </div>
                 </div>
             </div>

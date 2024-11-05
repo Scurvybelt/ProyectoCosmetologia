@@ -10,6 +10,8 @@ import { CartService } from '../../../cart.service';
 export class NavbarComponent implements OnInit {
 
     cartProducts = this.cartService.getItems();
+    isUserMenuVisible: boolean = false;
+    
 
     constructor(
         public router: Router,
@@ -17,6 +19,11 @@ export class NavbarComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {}
+
+    toggleUserMenu() {
+        this.isUserMenuVisible = !this.isUserMenuVisible;
+        console.log(this.isUserMenuVisible);
+    }
 
     switcherClassApplied = false;
     switcherToggleClass() {
@@ -45,4 +52,7 @@ export class NavbarComponent implements OnInit {
         }
     }
 
+
+    
+    
 }

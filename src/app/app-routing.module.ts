@@ -56,7 +56,7 @@ const routes: Routes = [
     {path: 'gallery-2', component: GalleryPageTwoComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'profile-authentication', component: ProfileAuthenticationPageComponent},
+    {path: 'admin', component: ProfileAuthenticationPageComponent},
     {path: 'forgot-password', component: ForgotPasswordPageComponent},
     {path: 'tracking-order', component: TrackingOrderPageComponent},
     {path: 'shop', component: ProductsPageComponent},

@@ -31,27 +31,30 @@ export class ContactPageComponent implements OnInit {
 		this.notifier.notify( type, message );
 	}
 
-  mandarFomrulario(){
+  mandarFormulario(){
     if(this.formCorreo.invalid){
       this.formCorreo.markAllAsTouched();
       return;
+    }else{
+      this.EnviarCorreo = true;
+      this.serviceMail.sendEmail(this.formCorreo.value).subscribe((res) => {
+        // console.log(res);
+        this.showNotification('success', 'Correo enviado correctamente');
+        this.EnviarCorreo = false;
+        
+        // notiflix.Notify.Success('Correo enviado correctamente');
+        
+      },(error) => {
+        this.showNotification('error', 'Error al enviar el correo');
+        this.EnviarCorreo = false;
+      })
     }
 
-    this.EnviarCorreo = true;
+    
     // console.log(this.formCorreo.value);
     
-
-    this.serviceMail.sendEmail(this.formCorreo.value).subscribe((res) => {
-      // console.log(res);
-      this.showNotification('success', 'Correo enviado correctamente');
-      this.EnviarCorreo = false;
-      
-      // notiflix.Notify.Success('Correo enviado correctamente');
-      
-    },(error) => {
-      this.showNotification('error', 'Error al enviar el correo');
-      this.EnviarCorreo = false;
-    })
+    
+    
   }
 
 }
