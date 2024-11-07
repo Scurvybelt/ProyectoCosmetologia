@@ -95,17 +95,17 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Nombre">
+                                    <input type="text" id="nombre" class="form-control" placeholder="Nombre">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Correo">
+                                    <input type="email" id="correo" class="form-control" placeholder="Correo">
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Celular">
+                                    <input type="email" id="celular" class="form-control" placeholder="Celular">
                                 </div>
                             </div>
                             <!--<div class="col-lg-6 col-md-6 col-sm-6">
@@ -120,7 +120,7 @@
                             </div>-->
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Fecha" bsDatepicker>
+                                    <input type="text" id="fecha" class="form-control" placeholder="Fecha" bsDatepicker>
                                 </div>
                             </div>
                             <!--<div class="col-lg-6 col-md-6 col-sm-6">
@@ -130,11 +130,11 @@
                             </div>-->
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" cols="30" rows="5" placeholder="Mensaje"></textarea>
+                                    <textarea name="message" id="mensaje" class="form-control" cols="30" rows="5" placeholder="Mensaje"></textarea>
                                 </div>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                <button type="submit" class="default-btn">Agendar</button>
+                                    <button type="submit" (click)="agendarCita()" class="default-btn" >Agendar</button>
                             </div>
                         </div>
                     </form>
