@@ -15,11 +15,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-4">
+            <!-- <div class="col-lg-5 col-md-4">
                 <div class="inner-img">
                     <img src="assets/images/inner-banner/inner-banner4.png" alt="inner-banner" />
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
@@ -41,7 +41,7 @@
                     <div class="sidebar-widget">
                         <h3>{{categoria}}</h3>
                         <p>Visualiza nuestros Servicios {{categoria}} con su descripción y <span style="font-weight: bold;">precio</span>.</p>
-                        <button class="default-btn" type="button">
+                        <button class="default-btn" type="button" (click)="descargarPdf()">
                             ¡Descarga el PDF!
                         </button>
                     </div>
@@ -56,19 +56,25 @@
                         <h1 style="text-align: center;">{{tratamiento}}</h1>
                         <p style="text-align: center;">{{description}}</p>
                         <div class="row">
-                            <div class="col-6">
-                                <div class="service-preview-img">
-                                    <img src="assets/images/services/{{img1}}" alt="550x410" />
-                                </div>
+                            <div style="text-align: center;" class="service-preview-img">
+                                <img [src]="img" alt="550x410"/>
                             </div>
-                            <div class="col-6">
+                            <!-- <div class="col-6">
+                                
+                            </div> -->
+                            <!-- <div class="col-6">
                                 <div class="service-preview-img">
                                     <img src="assets/images/services/{{img2}}" alt="550x410" />
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
-                        <p style="margin: 2rem;">{{information}}</p>
+                        <!-- <p style="margin: 2rem;">{{information}}</p> -->
                         <p style="text-align: right; font-size: 2.5rem;">{{price | currency:'MXN' }}</p>
+                        <div style="text-align: center;">
+                            <button class="default-btn" type="button" (click)="mandarMensaje(tratamiento)">
+                                ¡Agenda tu cita via WhatsApp! <i class="fa-brands fa-whatsapp"></i>
+                            </button>
+                        </div>
                     </ng-container>
                     <ng-template #noService>
                         <p style="text-align: center;">Para ver los detalles, <span style="font-weight: bold;">seleccione un servicio.</span></p>

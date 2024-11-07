@@ -11,7 +11,7 @@ export class ServiceDetailsPageComponent implements OnInit {
   tratamiento: any;
   id: any;
   description: any;
-  img1: any;
+  img: any;
   img2: any;
   price: any;
   information: any;
@@ -24,32 +24,49 @@ export class ServiceDetailsPageComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.categoria = params.get('categoria');
-      this.getServiceDetails(this.tratamiento, this.categoria);
+      // this.getServiceDetails(this.tratamiento, this.categoria);
     });
 
     this.servicios.getProductoByCategory(this.categoria).subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
       this.datosProducto = data;
     });
   }
 
+  mandarMensaje(tratamiento: string){
+    const phoneNumber = '2293676204'; // Reemplaza con el número de teléfono al que se enviará el mensaje
+    const message = `Hola, me gustaría agendar una cita para el tratamiento: ${tratamiento}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    
+    window.open(whatsappUrl, '_blank');
+  }
+
+  descargarPdf(){
+    console.log('Descargando PDF')
+  }
+
   getServiceDetails(id: string, category: string): void {
     this.servicios.getServiceByIdAndCategory(id, category).subscribe((data: any) => {
-      console.log(data);
+      // console.log(data);
+      
+      
       if (data.length > 0) {
-        this.id = data[0];
-        this.tratamiento = this.id.name;
-        this.description = this.id.description;
-        this.price = this.id.price;
-        this.information = this.id.information;
-        this.img1 = this.id.img1;
-        this.img2 = this.id.img2;
+        // // console.log(this.information)
+        let datos = data[0];
+        // this.id = data[0];
+        this.tratamiento = datos.name;
+        this.description = datos.description;
+        this.price = datos.price;
+        // this.information = datos.information;
+        this.img = datos.img;
+        // console.log(this.img)
+        // this.img2 = this.id.img2;
       }
     });
   }
 
   filtrarCategoria(id: any): void {
-    console.log(id);
+    // console.log(id);
     this.getServiceDetails(id, this.categoria);
     const element = document.querySelector('.service-details-content');
     if (element instanceof HTMLElement) {
