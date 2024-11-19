@@ -28,20 +28,21 @@
         <div class="row" style="justify-content: center;">
             <div class="col-lg-6 col-md-12">
                 <div class="login-form">
-                    <h2>Inicia Sesión</h2>
+                    <h2 style="text-align: center; margin-bottom: 0%;">Bienvenido</h2>
+                    <p style="text-align: center; margin-bottom: 8%;">Ingresa tus datos para <span style="font-weight: bold;">iniciar sesión.</span></p>
                     <form [formGroup]="formLogin" (ngSubmit)="mandarFormulario()">
                         <div class="form-group">
-                            <label>Usuario</label>
-                            <input type="text" formControlName="userName" class="form-control" placeholder="Ingresa tu usuario">
+                            <!--<label>Usuario</label>-->
+                            <input type="text" formControlName="userName" class="form-control" placeholder="Usuario">
                             <div *ngIf="formLogin.get('userName')?.invalid && formLogin.get('userName')?.touched" class="text-danger">
-                                Usuario es requerido
+                                <span style="font-style: italic;">Ingresa tu usuario</span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Contraseña</label>
-                            <input type="password" formControlName="password" class="form-control" placeholder="contraseña">
+                            <!--<label>Contraseña</label>-->
+                            <input type="password" formControlName="password" class="form-control" placeholder="Contraseña">
                             <div *ngIf="formLogin.get('password')?.invalid && formLogin.get('password')?.touched" class="text-danger">
-                                Contraseña es requerida
+                                <span style="font-style: italic;">Ingresa tu contraseña</span>
                             </div>
                         </div>
                         <div class="row align-items-center">
@@ -55,7 +56,7 @@
                                 <a routerLink="/forgot-password" class="lost-your-password">Forgot your password?</a>
                             </div> -->
                         </div>
-                        <button type="submit">Inicia Sesión</button>
+                        <button type="submit" style="width: 50%; display: block; margin: 0 auto;">Ingresar</button>
                     </form>
                 </div>
             </div>

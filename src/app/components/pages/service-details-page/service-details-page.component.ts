@@ -57,7 +57,7 @@ export class ServiceDetailsPageComponent implements OnInit {
         this.tratamiento = datos.name;
         this.description = datos.description;
         this.price = datos.price;
-        // this.information = datos.information;
+        this.information = datos.information;
         this.img = datos.img;
         // console.log(this.img)
         // this.img2 = this.id.img2;

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from '../../common/services/email.service';
 import { NotifierService } from 'angular-notifier';
-
+import { Injector } from '@angular/core';
 
 @Component({
   selector: 'app-contact-page',
@@ -13,7 +13,7 @@ export class ContactPageComponent implements OnInit {
   formCorreo: FormGroup;
   EnviarCorreo: boolean = false;
 
-  constructor(private fb: FormBuilder,private serviceMail: EmailService,private notifier: NotifierService) { 
+  constructor(private fb: FormBuilder, private serviceMail: EmailService,private notifier: NotifierService) { 
     this.notifier = notifier;
     this.formCorreo = this.fb.group({
       name: ['', [Validators.required]],

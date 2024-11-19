@@ -68,6 +68,7 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { ProductsPageComponent } from './components/pages/products-page/products-page.component';
 import { ProductDetailsPageComponent } from './components/pages/product-details-page/product-details-page.component';
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
+//import { EmailService } from './common/services/email.service';
 
 @NgModule({
     declarations: [
