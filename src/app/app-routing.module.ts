@@ -69,6 +69,7 @@ const routes: Routes = [
     {path: 'admin', component: ServicesListComponent},
     {path: 'checkout', component: CheckoutPageComponent},
     {path: 'formulario/:id', component: FormularioEditComponent},
+    {path: 'formulario', component: FormularioEditComponent},
     {path: 'customer-service', component: CustomerServicePageComponent},
     {path: 'blog-grid', component: BlogGridPageComponent},
     {path: 'blog-left-sidebar', component: BlogLeftSidebarPageComponent},

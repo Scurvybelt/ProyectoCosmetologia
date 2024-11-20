@@ -392,6 +392,37 @@
 
 }
 
+.default-btn4 {
+    position: relative;
+    padding: 13px 30px;
+    display: inline-block;
+    color: var(--whiteColor);
+    transition: var(--transition);
+    background-color: green;
+    border: 1px solid green;
+    font: {
+        size: var(--fontSize);
+        weight: 400;
+    };
+    &.with-icon {
+        padding: 12px 55px 12px 30px;
+
+        i {
+            transform: translateY(-50%);
+            position: absolute;
+            margin-top: 1px;
+            line-height: 1;
+            right: 30px;
+            top: 50%;
+        }
+    }
+    &:hover {
+        background-color: rgb(11, 55, 11);
+        border-color: rgb(11, 55, 11);
+        color: var(--whiteColor);
+    }
+}
+
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
 

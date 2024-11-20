@@ -4,140 +4,96 @@
 <!-- Checkout -->
 <div class="checkout-area ptb-100">
     <div class="container">
-        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div style="text-align: center;" class="service-preview-img">
+                <img style="margin-bottom: 1rem; border: 4px solid black; " [src]="imgServicio" alt="550x410"/>
+            </div>
+        </div>
+
+        <form [formGroup]="servicioForm">
             <div class="row">
-                <div class="col-lg-6 col-md-12">
                     <div class="billing-details">
-                        <h3><span>Billing details</span></h3>
+                        <h3><span>{{titulo}}</span></h3>
                         <div class="row">
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-12 mb-3">
                                 <div class="form-group">
-                                    <label for="fullname">
-                                        Full Name
+                                    <label for="name">
+                                        Nombre Servicio
                                         <span class="required">*</span>
                                     </label>
                                     <input
-                                        id="fullname"
+                                        id="name"
                                         type="text"
                                         class="form-control"
-                                        formControlName="fullname"
-                                        placeholder="Full Name"
+                                        formControlName="name"
+                                        placeholder="Nombre Producto"
                                     />
+                                    <div *ngIf="servicioForm.get('name')?.invalid && (servicioForm.get('name')?.dirty || servicioForm.get('name')?.touched)" class="text-danger">
+                                        <div *ngIf="servicioForm.get('name')?.errors?.['required']">El nombre es requerido.</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-12 mb-3">
+                                <div class="form-group">
+                                    <label for="categoria">
+                                        Categoria
+                                        <span class="required">*</span>
+                                    </label>
+                                    <input
+                                        id="categoria"
+                                        type="text"
+                                        class="form-control"
+                                        formControlName="categoria"
+                                        placeholder="categoria"
+                                    />
+                                    <div *ngIf="servicioForm.get('categoria')?.invalid && (servicioForm.get('categoria')?.dirty || servicioForm.get('categoria')?.touched)" class="text-danger">
+                                        <div *ngIf="servicioForm.get('categoria')?.errors?.['required']">La categoria es requerida.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mb-3">
                                 <div class="form-group">
                                     <label for="address">
-                                        Address
+                                        Precio
                                         <span class="required">*</span>
                                     </label>
                                     <input
-                                        id="address"
-                                        type="text"
+                                        id="price"
+                                        type="number"
                                         class="form-control"
-                                        formControlName="address"
-                                        placeholder="Address"
+                                        formControlName="price"
+                                        placeholder="Precio"
+                                        min="0"
                                     />
+                                    <div *ngIf="servicioForm.get('price')?.invalid && (servicioForm.get('price')?.dirty || servicioForm.get('price')?.touched)" class="text-danger">
+                                        <div *ngIf="servicioForm.get('price')?.errors?.['required']">El precio es requerido.</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12">
-                                <div class="form-group">
-                                    <label for="address">
-                                        City
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input
-                                        id="city"
-                                        type="text"
-                                        class="form-control"
-                                        formControlName="city"
-                                        placeholder="City"
-                                    />
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-6 col-md-12 mb-3">
                                 <div class="form-group">
                                     <label>
-                                        Email address
+                                        Descripción 
                                         <span class="required">*</span>
                                     </label>
-                                    <input
-                                        id="email"
+                                    <textarea
+                                        id="Descripción"
                                         type="text"
                                         class="form-control"
-                                        formControlName="email"
-                                        placeholder="Email"
-                                    />
+                                        formControlName="descripcion"
+                                        placeholder="Descripción de lo que se realiza en el servicio"
+                                    ></textarea>
+                                    <div *ngIf="servicioForm.get('descripcion')?.invalid && (servicioForm.get('descripcion')?.dirty || servicioForm.get('descripcion')?.touched)" class="text-danger">
+                                        <div *ngIf="servicioForm.get('descripcion')?.errors?.['required']">El precio es requerido.</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="order-details">
-                        <h3><span>Your order</span></h3>
-                        <div class="order-table table-responsive">
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr
-                                        *ngFor="let product of products;"
-                                    >
-                                        <td class="product-name">
-                                            <a
-                                                [routerLink]="[
-                                                    '/products',
-                                                    product.slug
-                                                ]"
-                                            >
-                                                {{product.title}}
-                                            </a>
-                                        </td>
-                                        <td class="product-total">
-                                            <span class="subtotal-amount">
-                                                ${{
-                                                    product.currentPrice *
-                                                    product.quantity
-                                                }}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="order-subtotal"><span>Cart Subtotal</span></td>
-                                        <td class="order-subtotal-price">
-                                            <span class="order-subtotal-amount">
-                                                ${{total}}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="order-shipping"><span>Shipping</span></td>
-                                        <td class="shipping-price">
-                                            <span>$00.00</span>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="total-price"><span>Order Total</span></td>
-                                        <td class="product-subtotal">
-                                            <span class="subtotal-amount">
-                                                ${{total}}
-                                            </span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="payment-box">
-                            <div class="payment-method">
-                                <p>
-                                    <input type="radio" id="cash-on-delivery" checked name="radio-group">
-                                    <label for="cash-on-delivery">Cash on delivery</label>
-                                    Pay with cash upon delivery.
-                                </p>
-                            </div>
-                            <button type="submit" class="default-btn"><span>Place Order</span></button>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <a (click)="regresar()" type="submit" class="default-btn"><i class="fa-solid fa-arrow-left"></i>  Regresar</a>
+                <a style="cursor: pointer;" (click)="onSubmit()" class="default-btn4 with-icon">EDITAR <i class="fa-regular fa-pen-to-square"></i></a>
             </div>
         </form>
     </div>
