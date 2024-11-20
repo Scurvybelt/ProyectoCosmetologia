@@ -34,6 +34,8 @@ import { TermsConditionsPageComponent } from './components/pages/terms-condition
 import { TestimonialsPageComponent } from './components/pages/testimonials-page/testimonials-page.component';
 import { TrackingOrderPageComponent } from './components/pages/tracking-order-page/tracking-order-page.component';
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
+import { ServicesListComponent } from './components/pages/services-list/services-list.component';
+import { FormularioEditComponent } from './components/pages/formulario-edit/formulario-edit.component';
 
 const routes: Routes = [
     {path: '', redirectTo: 'index-2', pathMatch: 'full'},
@@ -56,7 +58,7 @@ const routes: Routes = [
     {path: 'gallery-2', component: GalleryPageTwoComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
-    {path: 'admin', component: ProfileAuthenticationPageComponent},
+    {path: 'login', component: ProfileAuthenticationPageComponent},
     {path: 'forgot-password', component: ForgotPasswordPageComponent},
     {path: 'tracking-order', component: TrackingOrderPageComponent},
     {path: 'shop', component: ProductsPageComponent},
@@ -64,13 +66,16 @@ const routes: Routes = [
     {path: 'compare', component: ComparePageComponent},
     {path: 'cart', component: CartPageComponent},
     {path: 'wishlist', component: WishlistPageComponent},
+    {path: 'admin', component: ServicesListComponent},
     {path: 'checkout', component: CheckoutPageComponent},
+    {path: 'formulario/:id', component: FormularioEditComponent},
     {path: 'customer-service', component: CustomerServicePageComponent},
     {path: 'blog-grid', component: BlogGridPageComponent},
     {path: 'blog-left-sidebar', component: BlogLeftSidebarPageComponent},
     {path: 'blog-right-sidebar', component: BlogRightSidebarPageComponent},
     {path: 'blog-details', component: BlogDetailsPageComponent},
     {path: 'contact', component: ContactPageComponent},
+    
     // Here add new pages component
 
     {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list

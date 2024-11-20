@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../common/services/user.service';
 import { NotifierService } from 'angular-notifier';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-profile-authentication-page',
   templateUrl: './profile-authentication-page.component.html',
@@ -10,7 +11,7 @@ import { NotifierService } from 'angular-notifier';
 export class ProfileAuthenticationPageComponent implements OnInit {
   formLogin: FormGroup;
 
-  constructor(private notifier: NotifierService,private fb: FormBuilder,private userService: UserService) {
+  constructor(private router: Router,private notifier: NotifierService,private fb: FormBuilder,private userService: UserService) {
     this.notifier = notifier;
     this.formLogin = this.fb.group({
       userName: ['', [Validators.required]],
@@ -29,7 +30,11 @@ export class ProfileAuthenticationPageComponent implements OnInit {
     if(this.formLogin.invalid){
       this.formLogin.markAllAsTouched();
       return;
+    }else{
+      this.router.navigate(['/admin']);
     }
+
+
 
     // //Checa si existe el usuario
     // this.userService.existsUser('hola').subscribe( data => {

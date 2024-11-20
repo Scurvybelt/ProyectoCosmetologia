@@ -68,6 +68,8 @@ import { CheckoutPageComponent } from './components/pages/checkout-page/checkout
 import { ProductsPageComponent } from './components/pages/products-page/products-page.component';
 import { ProductDetailsPageComponent } from './components/pages/product-details-page/product-details-page.component';
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
+import { ServicesListComponent } from './components/pages/services-list/services-list.component';
+import { FormularioEditComponent } from './components/pages/formulario-edit/formulario-edit.component';
 //import { EmailService } from './common/services/email.service';
 
 @NgModule({
@@ -125,7 +127,9 @@ import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist
         CheckoutPageComponent,
         ProductsPageComponent,
         ProductDetailsPageComponent,
-        WishlistPageComponent
+        WishlistPageComponent,
+        ServicesListComponent,
+        FormularioEditComponent
     ],
     imports: [
         BrowserModule,

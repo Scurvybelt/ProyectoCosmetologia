@@ -1,0 +1,67 @@
+<!-- Inner Banner -->
+<!-- <div class="inner-banner">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-8">
+                <div class="inner-title">
+                    <h2>Wishlist</h2>
+                    <ul>
+                        <li>
+                            <a routerLink="/">home</a>
+                        </li>
+                        <li>Wishlist</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <div class="inner-img">
+                    <img src="assets/images/inner-banner/inner-banner9.png" alt="inner-banner" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Wishlist -->
+<div class="wishlist-area ptb-100">
+    <div class="container">
+        <h1 style="text-align: center;">Servicios</h1>
+        <form>
+            <div class="wishlist-table table-responsive">
+                <table class="table table-bordered">
+                    <thead class="thead-fixed">
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Acción</th>
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        <tr *ngFor="let servicio of servicios">
+                            <td class="product-thumbnail">
+                                <a routerLink="/product-details">
+                                    <img [src]="servicio.img" alt="product-image">
+                                    <!-- <h3>Nail Care Tools</h3> -->
+                                </a>
+                            </td>
+                            <td>{{servicio.category}}</td>
+                            <td>{{servicio.name}}</td>
+                            <td>{{servicio.price | currency:'MXN':'symbol':'1.2-2'}}</td>
+                            <td>
+                                <a routerLink="/formulario/{{servicio.id}}" class="default-btn2 with-icon" style="margin-right: 8px;">
+                                    Editar<i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <a routerLink="/wishlist" class="default-btn3 with-icon">
+                                    Eliminar <i class="fa-solid fa-delete-left"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+</div>
