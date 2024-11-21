@@ -20,7 +20,10 @@ export class ProfileAuthenticationPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    if(localStorage.getItem('usuario')){
+      this.router.navigate(['/admin']);
+      this.showNotification('success', 'Acesso Correcto');
+    }
   }
   public showNotification( type: string, message: string ): void {
 		this.notifier.notify( type, message );
@@ -31,7 +34,17 @@ export class ProfileAuthenticationPageComponent implements OnInit {
       this.formLogin.markAllAsTouched();
       return;
     }else{
-      this.router.navigate(['/admin']);
+      this.userService.login(this.formLogin.value.userName,this.formLogin.value.password).subscribe( (data: any) => {
+        
+        let respuesta = data[0];
+        if(respuesta == 'error'){
+          this.showNotification('error', 'Error checa tus credenciales sean las correctas');
+        }else{
+          this.showNotification('success', 'Acesso Correcto');
+          localStorage.setItem('usuario', JSON.stringify(data.user.user))
+          this.router.navigate(['/admin']);
+        }
+      })
     }
 
 
