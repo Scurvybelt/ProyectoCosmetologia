@@ -23,8 +23,16 @@ export class FormularioEditComponent {
         city: 'Colloyn',
         email: 'john.doe@ohix.com',
     });
-    servicio: any;
+
+    name: any;
+    description: any;
+    price: any;
+    information: any;
+    category: any;
+
     imgServicio: any;
+
+
     servicioForm: FormGroup;
     id: any = null;
     titulo: string = '';
@@ -49,15 +57,19 @@ export class FormularioEditComponent {
     ngOnInit(){
         this.id = this.route.snapshot.paramMap.get('id');  
         if(this.id){
-            this.titulo = 'Editar Servicio';
+            this.titulo = 'Modificar servicio';
         }else{
-            this.titulo = 'Crear Servicio';
+            this.titulo = 'Nuevo servicio';
         }
         
         if(this.id){
             this.servicioServices.getProductoById(this.id).subscribe((data: any) => {
                 console.log(data);
-                this.servicio = data;
+                this.name = data.name;
+                this.category = data.category;
+                this.description = data.description;
+                this.price = data.price;
+                this.information = data.information;
                 this.imgServicio = data.img;
             });
         }
@@ -74,15 +86,13 @@ export class FormularioEditComponent {
     
         if(this.id){
             //Editar
-            this.notifier.notify('success', 'Editado Correctamente');
+            this.notifier.notify('success', 'Modificado exitosamente');
         }else{
             //Crear  
-            this.notifier.notify('success', 'Creado Correctamente');  
+            this.notifier.notify('success', 'Creado existosamente');  
 
         }
 
-
-        
         // Process checkout data here
         // this.products = this.cartService.clearCart();
         // this.checkoutForm.reset();
