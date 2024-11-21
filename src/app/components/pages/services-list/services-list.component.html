@@ -25,17 +25,17 @@
 <!-- Wishlist -->
 <div class="wishlist-area ptb-100">
     <div class="container">
-        <h1 style="text-align: center;">Servicios</h1>
+        <h1 style="margin-bottom: 2.5rem; text-align: center;">Servicios</h1>
         <form>
-            <div class="wishlist-table table-responsive">
+            <div class="wishlist-table table-responsive" >
                 <table class="table table-bordered">
                     <thead class="thead-fixed">
                         <tr>
-                            <th scope="col">Producto</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Precio</th>
-                            <th scope="col">Acción</th>
+                            <th scope="col" style="background: #f2f6f9;">Imagen</th>
+                            <th scope="col" style="background: #f2f6f9;">Nombre</th>
+                            <th scope="col" style="background: #f2f6f9;">Categoría</th>
+                            <th scope="col" style="background: #f2f6f9;">Precio</th>
+                            <th scope="col" style="background: #f2f6f9;">Acción</th>
                         </tr>
                     </thead>
                    
@@ -47,14 +47,14 @@
                                     <!-- <h3>Nail Care Tools</h3> -->
                                 </a>
                             </td>
-                            <td>{{servicio.category}}</td>
                             <td>{{servicio.name}}</td>
+                            <td>{{servicio.category}}</td>
                             <td>{{servicio.price | currency:'MXN':'symbol':'1.2-2'}}</td>
                             <td>
-                                <a routerLink="/formulario/{{servicio.id}}" class="default-btn2 with-icon" style="margin-right: 8px;">
-                                    Editar<i class="fa-solid fa-pen-to-square"></i>
+                                <a routerLink="/formulario/{{servicio.id}}" class="default-btn2 with-icon" style="margin-right: 8px; border-radius: 10rem;">
+                                    Editar <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <a routerLink="/wishlist" class="default-btn3 with-icon">
+                                <a routerLink="/wishlist" class="default-btn3 with-icon" style="border-radius: 10rem;">
                                     Eliminar <i class="fa-solid fa-delete-left"></i>
                                 </a>
                             </td>
@@ -63,8 +63,8 @@
                 </table>
             </div>
         </form>
-        <div style="margin: 1rem;">
-            <a routerLink="/formulario" class="default-btn4 with-icon">
+        <div style="margin: 2rem 1rem;">
+            <a routerLink="/formulario" class="default-btn4 with-icon" style="border-radius: 10rem;">
                 Crear Servicio <i class="fa-solid fa-plus"></i>
             </a>
         </div>

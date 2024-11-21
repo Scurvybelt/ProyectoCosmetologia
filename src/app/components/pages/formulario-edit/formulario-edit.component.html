@@ -4,96 +4,120 @@
 <!-- Checkout -->
 <div class="checkout-area ptb-100">
     <div class="container">
-        <div class="row">
-            <div style="text-align: center;" class="service-preview-img">
-                <img style="margin-bottom: 1rem; border: 4px solid black; " [src]="imgServicio" alt="550x410"/>
-            </div>
-        </div>
-
         <form [formGroup]="servicioForm">
             <div class="row">
-                    <div class="billing-details">
-                        <h3><span>{{titulo}}</span></h3>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-12 mb-3">
-                                <div class="form-group">
-                                    <label for="name">
-                                        Nombre Servicio
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input
-                                        id="name"
-                                        type="text"
-                                        class="form-control"
-                                        formControlName="name"
-                                        placeholder="Nombre Producto"
-                                    />
-                                    <div *ngIf="servicioForm.get('name')?.invalid && (servicioForm.get('name')?.dirty || servicioForm.get('name')?.touched)" class="text-danger">
-                                        <div *ngIf="servicioForm.get('name')?.errors?.['required']">El nombre es requerido.</div>
-                                    </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <a (click)="regresar()" type="submit" class="default-btn" style="border-radius: 10rem;"><i class="fa-solid fa-arrow-left"></i> Regresar</a>
+                    <a style="cursor: pointer; border-radius: 10rem;" (click)="onSubmit()" class="default-btn4 with-icon">Guardar cambios<i class="fa-regular fa-pen-to-square"></i></a>
+                </div>
+                <div class="billing-details">
+                    <h3 style="margin-top: 2.5rem;"><span>{{titulo}}</span></h3>
+                </div>
+                <div class="billing-details col-lg-7 col-md-12 mb-3">
+                    <div class="row">
+                        <div>
+                            <div class="form-group">
+                                <label for="name">
+                                    Nombre Servicio
+                                    <span class="required">*</span>
+                                </label>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="name"
+                                    value="{{name}}"
+                                />
+                                <div *ngIf="servicioForm.get('name')?.invalid && (servicioForm.get('name')?.dirty || servicioForm.get('name')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('name')?.errors?.['required']">El nombre es requerido.</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 mb-3">
-                                <div class="form-group">
-                                    <label for="categoria">
-                                        Categoria
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input
-                                        id="categoria"
-                                        type="text"
-                                        class="form-control"
-                                        formControlName="categoria"
-                                        placeholder="categoria"
-                                    />
-                                    <div *ngIf="servicioForm.get('categoria')?.invalid && (servicioForm.get('categoria')?.dirty || servicioForm.get('categoria')?.touched)" class="text-danger">
-                                        <div *ngIf="servicioForm.get('categoria')?.errors?.['required']">La categoria es requerida.</div>
-                                    </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label for="categoria">
+                                    Categoría
+                                    <span class="required">*</span>
+                                </label>
+                                <input
+                                    id="categoria"
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="categoria"
+                                    value="{{category}}"
+                                />
+                                <div *ngIf="servicioForm.get('categoria')?.invalid && (servicioForm.get('categoria')?.dirty || servicioForm.get('categoria')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('categoria')?.errors?.['required']">La categoría es requerida.</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 mb-3">
-                                <div class="form-group">
-                                    <label for="address">
-                                        Precio
-                                        <span class="required">*</span>
-                                    </label>
-                                    <input
-                                        id="price"
-                                        type="number"
-                                        class="form-control"
-                                        formControlName="price"
-                                        placeholder="Precio"
-                                        min="0"
-                                    />
-                                    <div *ngIf="servicioForm.get('price')?.invalid && (servicioForm.get('price')?.dirty || servicioForm.get('price')?.touched)" class="text-danger">
-                                        <div *ngIf="servicioForm.get('price')?.errors?.['required']">El precio es requerido.</div>
-                                    </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label for="price">
+                                    Precio
+                                    <span class="required">*</span>
+                                </label>
+                                <input
+                                    id="price"
+                                    type="number"
+                                    class="form-control"
+                                    formControlName="price"
+                                    value="{{price}}"
+                                    min="0"
+                                />
+                                <div *ngIf="servicioForm.get('price')?.invalid && (servicioForm.get('price')?.dirty || servicioForm.get('price')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('price')?.errors?.['required']">El precio es requerido.</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 mb-3">
-                                <div class="form-group">
-                                    <label>
-                                        Descripción 
-                                        <span class="required">*</span>
-                                    </label>
-                                    <textarea
-                                        id="Descripción"
-                                        type="text"
-                                        class="form-control"
-                                        formControlName="descripcion"
-                                        placeholder="Descripción de lo que se realiza en el servicio"
-                                    ></textarea>
-                                    <div *ngIf="servicioForm.get('descripcion')?.invalid && (servicioForm.get('descripcion')?.dirty || servicioForm.get('descripcion')?.touched)" class="text-danger">
-                                        <div *ngIf="servicioForm.get('descripcion')?.errors?.['required']">El precio es requerido.</div>
-                                    </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label>
+                                    Descripción breve
+                                    <span class="required">*</span>
+                                </label>
+                                <textarea
+                                    id="Descripción breve"
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="descripcion"
+                                    value="{{description}}"
+                                ></textarea>
+                                <div *ngIf="servicioForm.get('descripcion')?.invalid && (servicioForm.get('descripcion')?.dirty || servicioForm.get('descripcion')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('descripcion')?.errors?.['required']">La descripción breve es requerida.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="form-group">
+                                <label>
+                                    Descripción detallada
+                                    <span class="required">*</span>
+                                </label>
+                                <textarea
+                                    id="Descipción detallada"
+                                    type="text"
+                                    class="form-control"
+                                    formControlName="information"
+                                    value="{{information}}"
+                                ></textarea>
+                                <div *ngIf="servicioForm.get('information')?.invalid && (servicioForm.get('information')?.dirty || servicioForm.get('information')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('information')?.errors?.['required']">La descripción detallada es requerida.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <a (click)="regresar()" type="submit" class="default-btn"><i class="fa-solid fa-arrow-left"></i>  Regresar</a>
-                <a style="cursor: pointer;" (click)="onSubmit()" class="default-btn4 with-icon">EDITAR <i class="fa-regular fa-pen-to-square"></i></a>
+                </div>
+                <div *ngIf="id; else noIdTemplate" class="col-lg-5 col-md-12">
+                    <div>
+                        <p style="margin-bottom:0; text-align: center;">Servicio a <span style="font-weight: bold;">modificar</span>:</p>
+                        <h1 style="margin-top:0; text-align: center;">{{name}}</h1>
+                        <div style="text-align: center;" class="service-preview-img">
+                            <img style="margin-top: 2rem; border: 4px solid black;" [src]="imgServicio" alt="550x410"/>
+                        </div>
+                    </div>
+                </div>
+                <ng-template #noIdTemplate></ng-template>
             </div>
         </form>
     </div>
