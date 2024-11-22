@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { NotifierService } from 'angular-notifier';
@@ -83,9 +83,9 @@ export class FormularioEditComponent implements OnInit{
 
     onSubmit(): void {
         console.log(this.id);
-        if(this.servicioForm.invalid) {
+        if (this.servicioForm.invalid) {
             this.servicioForm.markAllAsTouched();
-        }else {
+        } else {
             const name = this.servicioForm.get('name')?.value;
             const category = this.servicioForm.get('category')?.value;
             const price = this.servicioForm.get('price')?.value;
@@ -93,19 +93,39 @@ export class FormularioEditComponent implements OnInit{
             const information = this.servicioForm.get('information')?.value;
 
             if (this.id) {
-              this.servicioServices.updateService(this.id, name, category, price, description, information)
-                .subscribe((data: any) => {
-                    let respuesta = data[0];
-                    console.log(data);
-                    if (respuesta == 'error') {
-                      this.notifier.notify('error', 'Ups! Hubo un error al guardar cambios');
-                    } else {
-                      this.notifier.notify('success', 'Guardado exitosamente');
-                    }
-                });
-            }else {
-              // Lógica para crear un nuevo servicio
-              this.notifier.notify('success', 'Creado existosamente');
+                this.servicioServices.updateService(this.id, name, category, price, description, information)
+                    .subscribe(
+                        (data: any) => {
+                            let respuesta = data[0];
+                            console.log(data);
+                            if (respuesta === 'error') {
+                                this.notifier.notify('error', 'Ups! Hubo un error al guardar cambios');
+                            } else {
+                                this.notifier.notify('success', 'Guardado exitosamente');
+                            }
+                        },
+                        (error: HttpErrorResponse) => {
+                            console.error('Error:', error);
+                            this.notifier.notify('error', 'Error en el servidor: ' + error.message);
+                        }
+                    );
+            } else {
+                this.servicioServices.createService(name, category, price, description, information)
+                    .subscribe(
+                        (data: any) => {
+                            let respuesta = data[0];
+                            console.log(data);
+                            if (respuesta === 'error') {
+                                this.notifier.notify('error', 'Ups! Hubo un error al crear el servicio');
+                            } else {
+                                this.notifier.notify('success', 'Creado exitosamente');
+                            }
+                        },
+                        (error: HttpErrorResponse) => {
+                            console.error('Error:', error);
+                            this.notifier.notify('error', 'Error en el servidor: ' + error.message);
+                        }
+                    );
             }
         }
     }

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
@@ -36,11 +36,24 @@ export class ServiciosService {
     return this.http.get<any>(`${BASE_URL}?id=${id}&category=${category}`);
   }
 
-  setServicio(data: any){
-    return this.http.post(`${BASE_URL}`, data);
-  }
-
   updateService(id: number, name: string, category: string, price: number, description: string, information: string): Observable<any> {
     return this.http.put<any>(`${BASE_URL}`, { id, name, category, price, description, information });
   }
+
+  createService(name: string, category: string, price: number, description: string, information: string){
+    return this.http.post(`${BASE_URL}`, {name, category, price, description, information });
+  }
+
+  deleteService(payload: { id: string }): Observable<any> {
+    const headers = new HttpHeaders({
+        'Content-Type': 'application/json'
+    });
+
+    const options = {
+        headers: headers,
+        body: payload
+    };
+
+    return this.http.delete(`${BASE_URL}/services`, options);
+  };
 }

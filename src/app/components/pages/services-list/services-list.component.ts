@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ServiciosService } from '../../common/services/servicios.service';
+import { NotifierService } from 'angular-notifier';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-services-list',
@@ -8,23 +10,66 @@ import { ServiciosService } from '../../common/services/servicios.service';
 })
 export class ServicesListComponent {
 
+  private readonly notifier: NotifierService;
   servicios: Array<any> = [];
-  constructor(private servicioServices: ServiciosService) {
 
+  id: any;
+  name: any;
+  description: any;
+  price: any;
+  information: any;
+  category: any;
+  imgServicio: any;
+
+  constructor(private servicioServices: ServiciosService, notifierService: NotifierService,) {
+      this.notifier = notifierService;
   }
 
   ngOnInit(){
     this.servicioServices.getServicios().subscribe((data: any) => {
       this.servicios = data;
-      console.log(this.servicios);
     })
   }
 
-  eliminarServicio(id: any){
-
-  }
-
-  editarServicio(id: any){
+  onSubmit(servicio: any): void {
+    console.log('ID a eliminar:', servicio.id);
     
+    const payload = {
+        id: servicio.id.toString()
+    };
+
+    const headers = new HttpHeaders({
+        'Content-Type': 'application/json'
+    });
+
+    this.servicioServices.deleteService(payload).subscribe(
+        (data: any) => {
+            let respuesta = data[0];
+            console.log('Respuesta del servidor:', data);
+            
+            if (respuesta === 'error') {
+                this.notifier.notify('error', 'No se ha podido eliminar el servicio');
+            } else {
+                this.notifier.notify('success', 'Eliminado exitosamente');
+                this.loadServices();
+            }
+        },
+        (error: HttpErrorResponse) => {
+            console.error('Error:', error);
+            this.notifier.notify('error', 'Error en el servidor: ' + error.message);
+        }
+    );
+  } 
+
+  loadServices(): void {
+    this.servicioServices.getServicios().subscribe(
+      (data: any) => {
+        this.servicios = data;
+      }, 
+      (error: HttpErrorResponse) => {
+        console.error('Error:', error);
+        this.notifier.notify('error', 'Error al cargar los servicios: ' + error.message);
+      }
+    );
   }
 }
