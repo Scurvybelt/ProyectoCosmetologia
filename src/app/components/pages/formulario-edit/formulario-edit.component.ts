@@ -4,7 +4,7 @@ import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { NotifierService } from 'angular-notifier';
 import { CartService } from 'src/app/cart.service';
 import { ServiciosService } from '../../common/services/servicios.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario-edit',
@@ -36,7 +36,8 @@ export class FormularioEditComponent implements OnInit{
         private http: HttpClient,
         notifierService: NotifierService,
         private servicioServices: ServiciosService,
-        private route: ActivatedRoute
+        private route: ActivatedRoute,
+        private router: Router
     ) {
         this.servicioForm = this.formBuilder.group({
             name: ['', Validators.required],
@@ -102,6 +103,7 @@ export class FormularioEditComponent implements OnInit{
                                 this.notifier.notify('error', 'Ups! Hubo un error al guardar cambios');
                             } else {
                                 this.notifier.notify('success', 'Guardado exitosamente');
+                                this.router.navigate(['/admin']);
                             }
                         },
                         (error: HttpErrorResponse) => {
@@ -119,6 +121,7 @@ export class FormularioEditComponent implements OnInit{
                                 this.notifier.notify('error', 'Ups! Hubo un error al crear el servicio');
                             } else {
                                 this.notifier.notify('success', 'Creado exitosamente');
+                                this.router.navigate(['/admin']);
                             }
                         },
                         (error: HttpErrorResponse) => {

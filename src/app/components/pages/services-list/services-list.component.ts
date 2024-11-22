@@ -42,23 +42,25 @@ export class ServicesListComponent {
         'Content-Type': 'application/json'
     });
 
-    this.servicioServices.deleteService(payload).subscribe(
-        (data: any) => {
-            let respuesta = data[0];
-            console.log('Respuesta del servidor:', data);
-            
-            if (respuesta === 'error') {
-                this.notifier.notify('error', 'No se ha podido eliminar el servicio');
-            } else {
-                this.notifier.notify('success', 'Eliminado exitosamente');
-                this.loadServices();
+    if (confirm(`¿Está seguro de que desea eliminar el servicio: ${servicio.name}?`)) {
+        this.servicioServices.deleteService(payload).subscribe(
+            (data: any) => {
+                let respuesta = data[0];
+                console.log('Respuesta del servidor:', data);
+                
+                if (respuesta === 'error') {
+                    this.notifier.notify('error', 'No se ha podido eliminar el servicio');
+                } else {
+                    this.notifier.notify('success', 'Eliminado exitosamente');
+                    this.loadServices();
+                }
+            },
+            (error: HttpErrorResponse) => {
+                console.error('Error:', error);
+                this.notifier.notify('error', 'Error en el servidor: ' + error.message);
             }
-        },
-        (error: HttpErrorResponse) => {
-            console.error('Error:', error);
-            this.notifier.notify('error', 'Error en el servidor: ' + error.message);
-        }
-    );
+        );
+    }
   } 
 
   loadServices(): void {
