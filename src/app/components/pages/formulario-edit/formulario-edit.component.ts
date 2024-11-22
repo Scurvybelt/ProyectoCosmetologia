@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { NotifierService } from 'angular-notifier';
 import { CartService } from 'src/app/cart.service';
@@ -11,18 +11,13 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './formulario-edit.component.html',
   styleUrls: ['./formulario-edit.component.scss']
 })
-export class FormularioEditComponent {
+export class FormularioEditComponent implements OnInit{
+    servicioForm: FormGroup;
+
   private readonly notifier: NotifierService;
     productsUrl: any = [];
     products = this.cartService.getItems();
     total = this.cartService.getTotal();
-
-    checkoutForm = this.formBuilder.group({
-        fullname: 'John Doe',
-        address: '234 Church Street Colloyn PRETORIA 0083 SOUTH AFRICA',
-        city: 'Colloyn',
-        email: 'john.doe@ohix.com',
-    });
 
     name: any;
     description: any;
@@ -32,8 +27,6 @@ export class FormularioEditComponent {
 
     imgServicio: any;
 
-
-    servicioForm: FormGroup;
     id: any = null;
     titulo: string = '';
 
@@ -47,9 +40,10 @@ export class FormularioEditComponent {
     ) {
         this.servicioForm = this.formBuilder.group({
             name: ['', Validators.required],
-            categoria: ['', Validators.required],
+            category: ['', Validators.required],
             price: ['', [Validators.required]],
-            descripcion: ['', [Validators.required]],
+            description: ['', [Validators.required]],
+            information: ['', [Validators.required]],
         });
         this.notifier = notifierService;
     }
@@ -71,6 +65,14 @@ export class FormularioEditComponent {
                 this.price = data.price;
                 this.information = data.information;
                 this.imgServicio = data.img;
+
+                this.servicioForm = this.formBuilder.group({
+                    name: [this.name, Validators.required],
+                    category: [this.category, Validators.required],
+                    price: [this.price, [Validators.required]],
+                    description: [this.description, [Validators.required]],
+                    information: [this.information, [Validators.required]],
+                });
             });
         }
     }
@@ -80,21 +82,31 @@ export class FormularioEditComponent {
     }
 
     onSubmit(): void {
-        if(this.servicioForm.invalid){
+        console.log(this.id);
+        if(this.servicioForm.invalid) {
             this.servicioForm.markAllAsTouched();
-        }
-    
-        if(this.id){
-            //Editar
-            this.notifier.notify('success', 'Modificado exitosamente');
-        }else{
-            //Crear  
-            this.notifier.notify('success', 'Creado existosamente');  
+        }else {
+            const name = this.servicioForm.get('name')?.value;
+            const category = this.servicioForm.get('category')?.value;
+            const price = this.servicioForm.get('price')?.value;
+            const description = this.servicioForm.get('description')?.value;
+            const information = this.servicioForm.get('information')?.value;
 
+            if (this.id) {
+              this.servicioServices.updateService(this.id, name, category, price, description, information)
+                .subscribe((data: any) => {
+                    let respuesta = data[0];
+                    console.log(data);
+                    if (respuesta == 'error') {
+                      this.notifier.notify('error', 'Ups! Hubo un error al guardar cambios');
+                    } else {
+                      this.notifier.notify('success', 'Guardado exitosamente');
+                    }
+                });
+            }else {
+              // Lógica para crear un nuevo servicio
+              this.notifier.notify('success', 'Creado existosamente');
+            }
         }
-
-        // Process checkout data here
-        // this.products = this.cartService.clearCart();
-        // this.checkoutForm.reset();
     }
 }

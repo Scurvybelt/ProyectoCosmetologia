@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
 
 const BASE_URL = environment.apiLocal+'/services';
 
@@ -37,5 +38,9 @@ export class ServiciosService {
 
   setServicio(data: any){
     return this.http.post(`${BASE_URL}`, data);
+  }
+
+  updateService(id: number, name: string, category: string, price: number, description: string, information: string): Observable<any> {
+    return this.http.put<any>(`${BASE_URL}`, { id, name, category, price, description, information });
   }
 }

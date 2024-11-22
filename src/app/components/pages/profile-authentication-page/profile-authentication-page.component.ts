@@ -37,6 +37,7 @@ export class ProfileAuthenticationPageComponent implements OnInit {
       this.userService.login(this.formLogin.value.userName,this.formLogin.value.password).subscribe( (data: any) => {
         
         let respuesta = data[0];
+        console.log(data);
         if(respuesta == 'error'){
           this.showNotification('error', 'Error checa tus credenciales sean las correctas');
         }else{

@@ -28,26 +28,33 @@
                                     formControlName="name"
                                     value="{{name}}"
                                 />
-                                <div *ngIf="servicioForm.get('name')?.invalid && (servicioForm.get('name')?.dirty || servicioForm.get('name')?.touched)" class="text-danger">
+                                <div *ngIf="servicioForm.get('name')?.invalid && (servicioForm.get('name')?.dirty || servicioForm.get('name')?.touched) && !servicioForm.get('name')?.value" class="text-danger">
                                     <div *ngIf="servicioForm.get('name')?.errors?.['required']">El nombre es requerido.</div>
                                 </div>
                             </div>
                         </div>
                         <div>
                             <div class="form-group">
-                                <label for="categoria">
+                                <label for="category">
                                     Categoría
                                     <span class="required">*</span>
                                 </label>
-                                <input
-                                    id="categoria"
+                                <select 
+                                    id="category"
                                     type="text"
                                     class="form-control"
-                                    formControlName="categoria"
+                                    formControlName="category"
                                     value="{{category}}"
-                                />
-                                <div *ngIf="servicioForm.get('categoria')?.invalid && (servicioForm.get('categoria')?.dirty || servicioForm.get('categoria')?.touched)" class="text-danger">
-                                    <div *ngIf="servicioForm.get('categoria')?.errors?.['required']">La categoría es requerida.</div>
+                                    [(ngModel)]="category"
+                                    >
+                                    <option value="" disabled selected>Selecciona una categoría</option>
+                                    <option value="Corporales">Corporales</option>
+                                    <option value="Faciales">Faciales</option>
+                                    <option value="Depilacion">Depilación</option>
+                                    <option value="Masajes">Masajes</option>
+                                </select>
+                                <div *ngIf="servicioForm.get('category')?.invalid && (servicioForm.get('category')?.dirty || servicioForm.get('category')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('category')?.errors?.['required']">La categoría es requerida.</div>
                                 </div>
                             </div>
                         </div>
@@ -80,11 +87,13 @@
                                     id="Descripción breve"
                                     type="text"
                                     class="form-control"
-                                    formControlName="descripcion"
+                                    formControlName="description"
                                     value="{{description}}"
+                                    rows="5"
+                                    cols="50"
                                 ></textarea>
-                                <div *ngIf="servicioForm.get('descripcion')?.invalid && (servicioForm.get('descripcion')?.dirty || servicioForm.get('descripcion')?.touched)" class="text-danger">
-                                    <div *ngIf="servicioForm.get('descripcion')?.errors?.['required']">La descripción breve es requerida.</div>
+                                <div *ngIf="servicioForm.get('description')?.invalid && (servicioForm.get('description')?.dirty || servicioForm.get('description')?.touched)" class="text-danger">
+                                    <div *ngIf="servicioForm.get('description')?.errors?.['required']">La descripción breve es requerida.</div>
                                 </div>
                             </div>
                         </div>
@@ -100,6 +109,8 @@
                                     class="form-control"
                                     formControlName="information"
                                     value="{{information}}"
+                                    rows="5"
+                                    cols="50"
                                 ></textarea>
                                 <div *ngIf="servicioForm.get('information')?.invalid && (servicioForm.get('information')?.dirty || servicioForm.get('information')?.touched)" class="text-danger">
                                     <div *ngIf="servicioForm.get('information')?.errors?.['required']">La descripción detallada es requerida.</div>
