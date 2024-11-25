@@ -18,10 +18,12 @@ export class ServiceDetailsPageComponent implements OnInit {
   categoria: any;
   datosProducto: any;
   producto: any;
+  category: string = '';
 
   constructor(private route: ActivatedRoute,private servicios: ServiciosService) { }
 
   ngOnInit(): void {
+    this.category = this.route.snapshot.paramMap.get('categoria') ?? '';
     this.route.paramMap.subscribe(params => {
       this.categoria = params.get('categoria');
       // this.getServiceDetails(this.tratamiento, this.categoria);
@@ -42,7 +44,31 @@ export class ServiceDetailsPageComponent implements OnInit {
   }
 
   descargarPdf(){
-    console.log('Descargando PDF')
+
+    let pdfUrl = '';
+    console.log(this.category);
+
+    switch (this.category) {
+      case 'Corporales':
+        pdfUrl = '../../assets/images/pdf/Corporales.pdf';
+        break;
+      case 'Faciales':
+        pdfUrl = '../../assets/images/pdf/Faciales.pdf';
+        break;
+      case 'Depilación':
+        pdfUrl = '../../assets/images/pdf/Depilacion.pdf';
+        break;
+      case 'Masajes':
+        pdfUrl = '../../assets/images/pdf/Masajes.pdf';
+        break;
+      default:
+        console.error('Categoría no válida');
+        return;
+    }
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = `${this.category}.pdf`;
+    link.click();
   }
 
   getServiceDetails(id: string, category: string): void {

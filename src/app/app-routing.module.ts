@@ -36,6 +36,7 @@ import { TrackingOrderPageComponent } from './components/pages/tracking-order-pa
 import { WishlistPageComponent } from './components/pages/wishlist-page/wishlist-page.component';
 import { ServicesListComponent } from './components/pages/services-list/services-list.component';
 import { FormularioEditComponent } from './components/pages/formulario-edit/formulario-edit.component';
+import { authGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
     {path: '', redirectTo: 'index-2', pathMatch: 'full'},
@@ -66,10 +67,10 @@ const routes: Routes = [
     {path: 'compare', component: ComparePageComponent},
     {path: 'cart', component: CartPageComponent},
     {path: 'wishlist', component: WishlistPageComponent},
-    {path: 'admin', component: ServicesListComponent},
-    {path: 'checkout', component: CheckoutPageComponent},
-    {path: 'formulario/:id', component: FormularioEditComponent},
-    {path: 'formulario', component: FormularioEditComponent},
+    {path: 'admin', component: ServicesListComponent,canActivate: [authGuard]},
+    {path: 'checkout', component: CheckoutPageComponent },
+    {path: 'formulario/:id', component: FormularioEditComponent,canActivate: [authGuard]},
+    {path: 'formulario', component: FormularioEditComponent,canActivate: [authGuard]},
     {path: 'customer-service', component: CustomerServicePageComponent},
     {path: 'blog-grid', component: BlogGridPageComponent},
     {path: 'blog-left-sidebar', component: BlogLeftSidebarPageComponent},
