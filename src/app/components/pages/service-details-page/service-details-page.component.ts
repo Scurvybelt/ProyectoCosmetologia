@@ -36,7 +36,7 @@ export class ServiceDetailsPageComponent implements OnInit {
   }
 
   mandarMensaje(tratamiento: string){
-    const phoneNumber = '2293676204'; // Reemplaza con el número de teléfono al que se enviará el mensaje
+    const phoneNumber = '2299012681'; // Reemplaza con el número de teléfono al que se enviará el mensaje
     const message = `Hola, me gustaría agendar una cita para el tratamiento: ${tratamiento}`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     
