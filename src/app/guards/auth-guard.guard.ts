@@ -5,6 +5,10 @@ import { Router } from '@angular/router';
 
 export const authGuard: CanActivateFn = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => {
   const router:Router = inject(Router); 
-  const protectdRoutes:string[] = ['/admin','/formulario/:id','/formulario'];
-  return protectdRoutes.includes(state.url) && localStorage.getItem('usuario') ? true : router.navigate(['/login']);
+  const protectedRoutes: RegExp[] = [/^\/admin$/, /^\/formulario\/?$/, /^\/formulario\/\d+$/];
+
+  const isProtectedRoute = protectedRoutes.some((pattern) => pattern.test(state.url));
+  const isAuthenticated = !!localStorage.getItem('usuario');
+
+  return isProtectedRoute && isAuthenticated ? true : router.navigate(['/login']);
 };
